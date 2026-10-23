@@ -1,0 +1,20 @@
+# Private SOP and application documents
+Harsh_Bhojak_PhD_Statement_of_Purpose.pdf
+Harsh_Bhojak_Statement_of_Purpose_Revised.*
+applications_log.md
+job_application_answers.md
+imp_data.txt
+Harsh_Resume.pdf
+
+# Other local job/interview projects
+task_1_video_classifier/
+task_2_website_health_checker/
+node_modules/
+.pytest_cache/
+__pycache__/
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

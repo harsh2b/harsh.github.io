@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae — Harsh Kumar Bhojak</title>
+  
+  <!-- Academic Fonts: EB Garamond (Serif), Inter (Sans-serif metadata), JetBrains Mono (Code/Tags) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+       ACADEMIC CV STYLESHEET
+       Optimized for: High-Legibility Screen Preview + A4 Printing
+       ========================================================= */
+
+    @page {
+      size: A4 portrait;
+      margin: 12mm 15mm 12mm 15mm;
+      @bottom-right {
+        content: "Harsh Kumar Bhojak · Curriculum Vitae | Page " counter(page) " of " counter(pages);
+        font-family: 'EB Garamond', 'Georgia', serif;
+        font-size: 9pt;
+        color: #64748b;
+      }
+    }
+
+    :root {
+      --primary: #0f2942;         /* Oxford Deep Navy */
+      --primary-light: #1e3a8a;   /* Royal Blue */
+      --primary-accent: #2563eb;  /* Cobalt */
+      --text: #1e293b;            /* Deep Slate */
+      --text-muted: #475569;      /* Slate Grey */
+      --text-subtle: #64748b;     /* Muted Grey */
+      --border-subtle: #cbd5e1;   /* Slate 300 */
+      --border-strong: #0f2942;   /* Navy divider */
+      --bg-page: #ffffff;
+      --bg-screen: #f1f5f9;
+      --tag-bg: #f8fafc;
+      --tag-border: #e2e8f0;
+      --font-serif: 'EB Garamond', 'Latin Modern Roman', 'Georgia', 'Times New Roman', serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --cv-zoom: 1;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-screen);
+      color: var(--text);
+      font-family: var(--font-serif);
+      font-size: 11pt; /* Generous, clear academic typography */
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Screen Preview Container (A4 Proportions) */
+    .cv-sheet-wrapper {
+      max-width: 860px;
+      margin: 20px auto 40px auto;
+      background: var(--bg-page);
+      padding: 44px 52px;
+      box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(15, 23, 42, 0.06);
+      border-radius: 6px;
+      position: relative;
+      transition: font-size 0.2s ease, transform 0.2s ease;
+    }
+
+    /* Top Floating Print & Control Bar */
+    .top-action-bar {
+      max-width: 860px;
+      margin: 18px auto 0 auto;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 10px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .top-action-bar .meta-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text-muted);
+    }
+
+    .badge-a4 {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2.5px 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Font Size Scaler Control */
+    .zoom-control-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 2px 4px;
+    }
+
+    .zoom-label {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      padding: 0 4px;
+    }
+
+    .zoom-btn {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      padding: 3px 8px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-family: var(--font-sans);
+    }
+
+    .zoom-btn:hover {
+      background: #eff6ff;
+      border-color: var(--primary-accent);
+      color: var(--primary-light);
+    }
+
+    .zoom-indicator {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--primary-light);
+      min-width: 42px;
+      text-align: center;
+    }
+
+    .btn-group-nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      font-size: 12.5px;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-family: var(--font-sans);
+    }
+
+    .btn-primary {
+      background: var(--primary-light);
+      color: #ffffff;
+      border: 1px solid var(--primary-light);
+    }
+    .btn-primary:hover {
+      background: #1d4ed8;
+      border-color: #1d4ed8;
+      box-shadow: 0 2px 8px rgba(29, 78, 216, 0.25);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--text-muted);
+      border: 1px solid #cbd5e1;
+    }
+    .btn-secondary:hover {
+      background: #f8fafc;
+      color: var(--text);
+    }
+
+    /* =========================================================
+       HEADER STYLING
+       ========================================================= */
+    header {
+      text-align: center;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--primary);
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 10%;
+      right: 10%;
+      height: 0.6px;
+      background: var(--border-subtle);
+    }
+
+    h1.candidate-name {
+      font-size: 25pt;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 3px;
+      font-family: var(--font-serif);
+      line-height: 1.15;
+    }
+
+    .candidate-title {
+      font-family: var(--font-sans);
+      font-size: 11.2pt;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 7px;
+      letter-spacing: 0.1px;
+    }
+
+    .candidate-title strong {
+      color: var(--primary-light);
+      font-weight: 600;
+    }
+
+    .contact-links-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 5px 16px;
+      font-family: var(--font-sans);
+      font-size: 9.8pt; /* Up from 8.8pt */
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      text-decoration: none;
+      color: var(--text-muted);
+      transition: color 0.15s ease;
+    }
+
+    .contact-item:hover {
+      color: var(--primary-accent);
+      text-decoration: underline;
+    }
+
+    .contact-item svg {
+      width: 14px; /* Up from 12px */
+      height: 14px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    .contact-item.highlight-link {
+      font-weight: 600;
+      color: var(--primary-light);
+    }
+
+    .contact-sep {
+      color: #94a3b8;
+      user-select: none;
+    }
+
+    /* =========================================================
+       SECTION ARCHITECTURE
+       ========================================================= */
+    section {
+      margin-top: 13px;
+      page-break-inside: auto;
+    }
+
+    h2.section-heading {
+      font-family: var(--font-sans);
+      font-size: 11.5pt; /* Up from 10.5pt */
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--primary);
+      border-bottom: 1.4px solid var(--primary);
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      page-break-after: avoid;
+    }
+
+    /* Research Pillars Grid / Statement */
+    .research-focus-wrap {
+      font-size: 10.8pt; /* Up from 9.8pt */
+      text-align: justify;
+      margin-bottom: 6px;
+      line-height: 1.46;
+    }
+
+    .pillar-row {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 5px;
+    }
+
+    .pillar-item {
+      font-size: 10.3pt; /* Up from 9.3pt */
+      line-height: 1.40;
+      padding-left: 16px;
+      position: relative;
+      text-align: justify;
+    }
+
+    .pillar-item::before {
+      content: "▪";
+      position: absolute;
+      left: 2px;
+      color: var(--primary-light);
+      font-size: 9pt;
+    }
+
+    .pillar-item strong {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 10.1pt;
+    }
+
+    /* Content Items (Education, Jobs, Projects) */
+    .cv-item {
+      margin-bottom: 9px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .item-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 11pt;
+    }
+
+    .institution-name {
+      font-weight: 700;
+      font-family: var(--font-serif);
+      font-size: 11.4pt; /* Up from 10.3pt */
+      color: #0f172a;
+    }
+
+    .item-location {
+      font-family: var(--font-sans);
+      font-size: 9.8pt; /* Up from 8.9pt */
+      color: var(--text-muted);
+      font-weight: 500;
+      text-align: right;
+    }
+
+    .item-sub-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-style: italic;
+      font-size: 10.4pt;
+      color: var(--primary-light);
+      margin-top: 1px;
+      margin-bottom: 3px;
+    }
+
+    .item-degree-title {
+      font-weight: 600;
+      font-style: normal;
+      font-family: var(--font-sans);
+      font-size: 10.5pt; /* Up from 9.3pt */
+      color: #1e3a8a;
+    }
+
+    .item-date-range {
+      font-family: var(--font-sans);
+      font-style: normal;
+      font-size: 9.6pt; /* Up from 8.8pt */
+      color: var(--text-muted);
+      font-weight: 500;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    ul.academic-bullets {
+      margin-left: 20px;
+      margin-top: 3px;
+    }
+
+    ul.academic-bullets li {
+      margin-bottom: 3.5px;
+      font-size: 10.4pt; /* Up from 9.3pt */
+      line-height: 1.42;
+      text-align: justify;
+    }
+
+    ul.academic-bullets li strong {
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    code {
+      font-family: var(--font-mono);
+      font-size: 9.2pt;
+      background: var(--tag-bg);
+      border: 0.6px solid var(--tag-border);
+      border-radius: 3px;
+      padding: 0.5px 4px;
+      color: #0f2942;
+    }
+
+    /* Publication Styling */
+    .pub-entry-card {
+      margin-bottom: 8px;
+      padding-left: 20px;
+      text-indent: -20px;
+      font-size: 10.4pt; /* Up from 9.4pt */
+      line-height: 1.42;
+      text-align: justify;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .pub-entry-card strong.self-author {
+      text-decoration: underline;
+      font-weight: 700;
+      color: #0f2942;
+    }
+
+    .pub-badge-pill {
+      font-family: var(--font-sans);
+      font-size: 8.6pt; /* Up from 7.6pt */
+      font-weight: 600;
+      padding: 1.5px 6px;
+      border: 0.8px solid #94a3b8;
+      border-radius: 4px;
+      margin-left: 5px;
+      color: var(--primary-light);
+      text-indent: 0;
+      display: inline-block;
+      text-decoration: none;
+      background: #ffffff;
+      transition: all 0.15s ease;
+    }
+
+    .pub-badge-pill:hover {
+      background: #eff6ff;
+      border-color: var(--primary-accent);
+      color: #1d4ed8;
+    }
+
+    /* Skills Table */
+    .skills-matrix {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10.2pt; /* Up from 9.2pt */
+      line-height: 1.40;
+    }
+
+    .skills-matrix td {
+      padding: 3px 0;
+      vertical-align: top;
+    }
+
+    .skills-category {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 10pt; /* Up from 8.9pt */
+      color: var(--primary);
+      width: 29%;
+      padding-right: 12px;
+    }
+
+    .skills-list {
+      width: 71%;
+      color: var(--text);
+    }
+
+    /* References Grid */
+    .ref-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 4px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .ref-card {
+      background: #ffffff;
+      border-left: 2.5px solid var(--primary-light);
+      padding: 3px 0 3px 10px;
+      font-size: 10.1pt; /* Up from 9.1pt */
+      line-height: 1.38;
+    }
+
+    .ref-name {
+      font-weight: 700;
+      font-family: var(--font-sans);
+      font-size: 10.6pt; /* Up from 9.4pt */
+      color: #0f172a;
+    }
+
+    .ref-title {
+      font-size: 9.6pt;
+      color: var(--text-muted);
+    }
+
+    .ref-email {
+      font-family: var(--font-mono);
+      font-size: 9.2pt;
+      color: var(--primary-light);
+    }
+
+    /* =========================================================
+       PRINT STYLESHEET (STRICT A4 2-PAGE DISCIPLINE)
+       ========================================================= */
+    @media print {
+      body {
+        background: #ffffff !important;
+        font-size: 10.2pt !important;
+        line-height: 1.35 !important;
+        color: #000000 !important;
+      }
+
+      .top-action-bar {
+        display: none !important;
+      }
+
+      .cv-sheet-wrapper {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        font-size: 10.2pt !important;
+      }
+
+      header {
+        border-bottom: 1.5px solid #000000 !important;
+        padding-bottom: 8px !important;
+        margin-bottom: 10px !important;
+      }
+
+      header::after {
+        display: none !important;
+      }
+
+      h1.candidate-name {
+        color: #000000 !important;
+        font-size: 22pt !important;
+      }
+
+      h2.section-heading {
+        color: #000000 !important;
+        border-bottom: 1px solid #000000 !important;
+        font-size: 10.5pt !important;
+        margin-top: 10px !important;
+        margin-bottom: 5px !important;
+        page-break-after: avoid !important;
+        break-after: avoid !important;
+      }
+
+      ul.academic-bullets li, .pillar-item, .pub-entry-card {
+        font-size: 9.8pt !important;
+        line-height: 1.32 !important;
+      }
+
+      .skills-matrix {
+        font-size: 9.6pt !important;
+      }
+
+      .item-degree-title, .institution-name, .pillar-item strong, .skills-category {
+        color: #000000 !important;
+      }
+
+      a {
+        color: #000000 !important;
+        text-decoration: none !important;
+      }
+
+      .pub-badge-pill {
+        border: 0.6px solid #444444 !important;
+        color: #000000 !important;
+        font-size: 8pt !important;
+      }
+
+      .cv-item, .pub-entry-card, .ref-card {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Action Bar (Hidden during Print / PDF Export) -->
+  <div class="top-action-bar">
+    <div class="meta-info">
+      <span class="badge-a4">A4 Academic Standard</span>
+      <span><strong>Harsh Kumar Bhojak</strong> — Academic CV</span>
+      
+      <!-- Interactive Font Size Scaler -->
+      <div class="zoom-control-wrap" title="Adjust font size for screen viewing">
+        <span class="zoom-label">Font:</span>
+        <button class="zoom-btn" onclick="adjustCvZoom(-0.06)" title="Decrease font size">A−</button>
+        <span class="zoom-indicator" id="zoomPercent">100%</span>
+        <button class="zoom-btn" onclick="adjustCvZoom(0.06)" title="Increase font size">A+</button>
+        <button class="zoom-btn" onclick="resetCvZoom()" title="Reset font size" style="font-size: 10px; padding: 3px 5px;">Reset</button>
+      </div>
+    </div>
+    <div class="btn-group-nav">
+      <a class="btn-action btn-secondary" href="index.html">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Portfolio Website
+      </a>
+      <button class="btn-action btn-primary" onclick="window.print()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+        Print / Save to PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- A4 Academic CV Document -->
+  <div class="cv-sheet-wrapper" id="cvWrapper">
+
+    <!-- Header -->
+    <header>
+      <h1 class="candidate-name">Harsh Kumar Bhojak</h1>
+      <div class="candidate-title">
+        Graduate Researcher · <strong>National Institute of Technology (NIT) Jalandhar</strong>, Punjab, India
+      </div>
+      <div class="contact-links-grid">
+        <a class="contact-item" href="mailto:harshbhojak5@gmail.com">
+          <svg viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.259l4.616-3.74v9.452l-4.616-5.712z"/></svg>
+          harshbhojak5@gmail.com
+        </a>
+        <span class="contact-sep">|</span>
+        <a class="contact-item" href="mailto:harshkb.sp.24@nitj.ac.in">
+          <svg viewBox="0 0 24 24"><path d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2zm0 13l-7-3.18V18l7 3.18 7-3.18v-6.18L12 15z"/></svg>
+          harshkb.sp.24@nitj.ac.in
+        </a>
+        <span class="contact-sep">|</span>
+        <a class="contact-item highlight-link" href="https://harshkb.dev" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 16.057v-3.057h2.036c.269 0 .504-.158.607-.402.103-.244.05-.526-.135-.718l-3.036-3.155c-.294-.306-.778-.306-1.072 0l-3.036 3.155c-.185.192-.238.474-.135.718.103.244.338.402.607.402h2.036v3.057c0 .553.447 1 1 1s1-.447 1-1z"/></svg>
+          harshkb.dev
+        </a>
+        <span class="contact-sep">|</span>
+        <a class="contact-item highlight-link" href="https://scholar.google.com/citations?user=AERr9JFapsS7cVs0AKu8EHFLM03utnpNz85mBmw8NIb3SSI81c03wESY0JJN" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4 3.18v6.78h4v-3.64l4 3.18 12-9.5z"/></svg>
+          Google Scholar
+        </a>
+        <span class="contact-sep">|</span>
+        <a class="contact-item" href="https://github.com/harsh2b" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          github.com/harsh2b
+        </a>
+        <span class="contact-sep">|</span>
+        <a class="contact-item" href="https://www.linkedin.com/in/harshkb2" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          linkedin.com/in/harshkb2
+        </a>
+        <span class="contact-sep">|</span>
+        <span class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          +91-9630499150
+        </span>
+      </div>
+    </header>
+
+    <!-- Research Interests -->
+    <section>
+      <h2 class="section-heading">Research Interests</h2>
+      <div class="research-focus-wrap">
+        My doctoral research interests converge at the intersection of <strong>Real-Time Interactive AI Systems</strong>, <strong>Virtual Worlds &amp; Serious Games</strong>, and <strong>Voice-Enabled Multimodal Agent Architectures</strong>. Grounded in rigorous graduate foundations of Signal Processing and Machine Learning, my work focuses on:
+      </div>
+      <div class="pillar-row">
+        <div class="pillar-item">
+          <strong>Real-Time Interactive AI &amp; Serious Games:</strong> Building intelligent non-player characters (NPCs) and dynamic behavioral scaffolding inside interactive virtual environments (Unity 3D) via event-driven WebSockets, replacing static scripted game trees with adaptive agency.
+        </div>
+        <div class="pillar-item">
+          <strong>Voice-Enabled Multimodal Agent Architectures:</strong> Sub-second streaming conversational loops (orchestrating speech recognition, multi-agent LLM reasoning, and low-latency voice synthesis), natural turn-taking dynamics, and dynamic persona modulation for clinical assistive therapy (Autism Spectrum Disorder / ASD).
+        </div>
+        <div class="pillar-item">
+          <strong>Signal Processing &amp; Applied Machine Learning Foundations:</strong> Mathematical grounding in stochastic processes, statistical signal estimation, temporal state sequences, edge computer vision, and systematic evaluation of multimodal foundation models (Vision-Language Models).
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2 class="section-heading">Education</h2>
+      
+      <!-- NIT Jalandhar -->
+      <div class="cv-item">
+        <div class="item-header-row">
+          <span class="institution-name">Dr. B. R. Ambedkar National Institute of Technology (NIT) Jalandhar</span>
+          <span class="item-location">Punjab, India</span>
+        </div>
+        <div class="item-sub-row">
+          <span class="item-degree-title">Master of Technology (M.Tech) in Signal Processing and Machine Learning</span>
+          <span class="item-date-range">2024 – 2026 (Expected)</span>
+        </div>
+        <ul class="academic-bullets">
+          <li><strong>Cumulative GPA:</strong> 8.16 / 10.00 (First Division)</li>
+          <li><strong>Thesis:</strong> <em>Real-Time Multimodal Voice and Language Interaction in Serious Games for Neurodevelopmental Support</em></li>
+          <li><strong>Advisors &amp; Mentors:</strong> Prof. Arun Khosla (Thesis Advisor), Neha Sharma (PhD Scholar &amp; Co-Researcher)</li>
+          <li><strong>Rigorous Graduate Coursework:</strong> Advanced Signal Processing, Applied Linear Algebra and Optimization, Probability and Stochastic Processes, Deep Learning, Statistical Signal Processing, Audio Signal Analysis, Advanced Communication Systems.</li>
+          <li><strong>Research Fellowship:</strong> Awarded MHRD / Ministry of Education Postgraduate Fellowship and Teaching Assistantship.</li>
+        </ul>
+      </div>
+
+      <!-- IGEC Sagar -->
+      <div class="cv-item">
+        <div class="item-header-row">
+          <span class="institution-name">Indira Gandhi Engineering College (IGEC Sagar / RGPV)</span>
+          <span class="item-location">Madhya Pradesh, India</span>
+        </div>
+        <div class="item-sub-row">
+          <span class="item-degree-title">Bachelor of Technology (B.Tech) in Electrical Engineering</span>
+          <span class="item-date-range">2017 – 2021</span>
+        </div>
+        <ul class="academic-bullets">
+          <li><strong>Cumulative GPA:</strong> 7.50 / 10.00</li>
+          <li><strong>Capstone Project:</strong> <em>Closed-Loop Standalone 3-Phase Inverter Design and Simulation</em> (Modeled feedback control systems in PSIM and MATLAB).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Publications & Preprints -->
+    <section>
+      <h2 class="section-heading">Peer-Reviewed Publications</h2>
+      
+      <div class="pub-entry-card">
+        [1] <strong class="self-author">Harsh Kumar Bhojak</strong>, Arun Khosla, and Neha Sharma.
+        <strong>"LLM-Powered Real-Time Voice Agent for Task-Guided Practice in Serious Games for ASD."</strong>
+        In <em>Proceedings of the IEEE 5th International Conference on Secure Cyber Computing and Communications (ICSCCC)</em>, IEEE, 2026.
+        <a class="pub-badge-pill" href="https://scholar.google.com/citations?user=AERr9JFapsS7cVs0AKu8EHFLM03utnpNz85mBmw8NIb3SSI81c03wESY0JJN" target="_blank">[Google Scholar]</a>
+        <a class="pub-badge-pill" href="#">[IEEE Xplore]</a>
+        <a class="pub-badge-pill" href="https://github.com/harsh2b/voice_agent_production" target="_blank">[Code Repository]</a>
+      </div>
+    </section>
+
+    <!-- Industry & Applied AI Experience (Contract) -->
+    <section>
+      <h2 class="section-heading">Industry &amp; Applied AI Experience (Contract)</h2>
+
+      <!-- Innodata -->
+      <div class="cv-item">
+        <div class="item-header-row">
+          <span class="institution-name">Innodata Inc.</span>
+          <span class="item-location">Remote (Contract)</span>
+        </div>
+        <div class="item-sub-row">
+          <span class="item-degree-title">Senior Associate – Vision-Language Models (VLMs)</span>
+          <span class="item-date-range">Jun. 2026 – Present</span>
+        </div>
+        <ul class="academic-bullets">
+          <li>Architect complex multi-step reasoning benchmarks and systematic evaluation protocols for frontier Vision-Language Models (VLMs).</li>
+          <li>Curate high-fidelity multimodal datasets assessing cross-modal grounding, spatial-geometric relationships, and logical deduction.</li>
+          <li>Collaborate on automated rubric verification and synthetic reasoning trajectories to stress-test compositional generalization in frontier foundation models.</li>
+        </ul>
+      </div>
+
+      <!-- Quality Kiosk -->
+      <div class="cv-item">
+        <div class="item-header-row">
+          <span class="institution-name">Quality Kiosk Technologies</span>
+          <span class="item-location">Remote (Contract)</span>
+        </div>
+        <div class="item-sub-row">
+          <span class="item-degree-title">AI Research Consultant – Generative AI</span>
+          <span class="item-date-range">Sep. 2025 – Dec. 2025</span>
+        </div>
+        <ul class="academic-bullets">
+          <li>Standardized 20+ automated evaluation metrics to quantify hallucination rates, semantic drift, and instruction fidelity in generative models, yielding a 30% measured gain in pipeline consistency.</li>
+          <li>Executed adversarial red-teaming and safety audits adhering to the OWASP GenAI Top 10 framework, establishing guardrails against prompt injection and data leakage.</li>
+          <li>Engineered high-throughput, low-latency API wrappers using FastAPI and Django REST Framework for production inference.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Selected Research Systems & Projects -->
+    <section>
+      <h2 class="section-heading">Selected Research Systems &amp; Software</h2>
+
+      <!-- Project 1 -->
+      <div class="cv-item">
+        <div class="item-header-row">
+          <span class="institution-name">Agentic Voice Scaffolding Engine for Serious Games in ASD Therapy</span>
+          <span class="item-location">Python, AutoGen, Unity, WebSockets, GCP</span>
+        </div>
+        <ul class="academic-bullets">
+          <li>Designed an event-driven <code>ASR &rarr; LLM &rarr; TTS</code> pipeline integrated via WebSockets into Unity serious games to deliver real-time vocal scaffolding for children with Autism Spectrum Disorder (ASD).</li>
+          <li>Implemented dynamic persona modulation that adapts instructional pacing to telemetry without modifying game mechanics, demonstrating a 30% increase in patient task completion rates in preliminary user trials.</li>
+        </ul>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="cv-item">
+        <div class="item-header-row">
+          <span class="institution-name">Wellmate: Clinical Retrieval-Augmented Generation (RAG) Architecture</span>
+          <span class="item-location">FastAPI, Pinecone, LangChain, Google Cloud Run</span>
+        </div>
+        <ul class="academic-bullets">
+          <li>Architected a medical question-answering system combining dense vector search with automated PII masking and clinical hallucination guardrails, achieving &gt;96% contextual relevancy across 1,200+ complex queries.</li>
+          <li>Deployed containerized microservices on Google Cloud Run serving 500+ active test users with strict latency SLAs.</li>
+        </ul>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="cv-item">
+        <div class="item-header-row">
+          <span class="institution-name">Edge-Optimized Urban Traffic &amp; Safety Computer Vision Pipeline</span>
+          <span class="item-location">PyTorch, YOLOv8, OpenCV</span>
+        </div>
+        <ul class="academic-bullets">
+          <li>Engineered an automated urban safety detection pipeline identifying helmet compliance and rider bounding boxes on continuous live video streams.</li>
+          <li>Optimized model inference latency for resource-constrained edge computing environments without degradation of mAP.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Honors & Achievements -->
+    <section>
+      <h2 class="section-heading">Honors &amp; Fellowships</h2>
+      <ul class="academic-bullets">
+        <li><strong>GATE 2024 Qualified:</strong> Qualified the highly competitive Graduate Aptitude Test in Engineering (GATE 2024), administered nationally by the Indian Institutes of Technology (IITs).</li>
+        <li><strong>MHRD / Ministry of Education Postgraduate Fellowship:</strong> Awarded full government stipend and teaching assistantship for full-time M.Tech studies at NIT Jalandhar (2024 – 2026).</li>
+        <li><strong>First Author IEEE Publication:</strong> Research paper on conversational voice agents in serious games accepted at IEEE ICSCCC 2026.</li>
+      </ul>
+    </section>
+
+    <!-- Technical Skills -->
+    <section>
+      <h2 class="section-heading">Technical Skills &amp; Methodologies</h2>
+      <table class="skills-matrix">
+        <tr>
+          <td class="skills-category">Mathematical Foundations:</td>
+          <td class="skills-list">Linear Algebra, Optimization, Probability &amp; Stochastic Processes, Digital Signal Processing, Statistical Signal Processing, Audio Feature Analysis (STFT, Mel-Spectrograms, MFCCs).</td>
+        </tr>
+        <tr>
+          <td class="skills-category">AI, Machine Learning &amp; Multimodal:</td>
+          <td class="skills-list">Vision-Language Models (VLMs), Speech Recognition (ASR), Text-to-Speech (TTS), Multi-Agent Systems (AutoGen, CrewAI), RAG, Transformer Architectures, Deep Learning, Computer Vision.</td>
+        </tr>
+        <tr>
+          <td class="skills-category">Programming Languages &amp; Frameworks:</td>
+          <td class="skills-list">Python, MATLAB, JavaScript/TypeScript, PyTorch, TensorFlow, OpenCV, FastAPI, Django REST, LangChain, Hugging Face.</td>
+        </tr>
+        <tr>
+          <td class="skills-category">Cloud, Systems &amp; Environments:</td>
+          <td class="skills-list">Docker, Linux/Bash, Git, Google Cloud Platform (GCP), Pinecone, Unity 3D, LaTeX, Ollama, CI/CD pipelines.</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Academic References -->
+    <section>
+      <h2 class="section-heading">Academic References</h2>
+      <div class="ref-grid">
+        <div class="ref-card">
+          <div class="ref-name">Prof. Arun Khosla</div>
+          <div class="ref-title">Professor, Department of Electronics &amp; Communication Engineering</div>
+          <div class="ref-title">Dr. B. R. Ambedkar National Institute of Technology (NIT) Jalandhar</div>
+          <div><em>Role:</em> Thesis Advisor · <span class="ref-email">khoslaa@nitj.ac.in</span></div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-name">Neha Sharma</div>
+          <div class="ref-title">PhD Scholar, Department of Electronics &amp; Communication Engineering</div>
+          <div class="ref-title">Dr. B. R. Ambedkar National Institute of Technology (NIT) Jalandhar</div>
+          <div><em>Role:</em> Research Collaborator &amp; Thesis Co-Mentor</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // Interactive Font Zoom Controller for Screen Preview
+    let currentZoom = 1.0;
+    const wrapper = document.getElementById('cvWrapper');
+    const zoomText = document.getElementById('zoomPercent');
+
+    function updateCvZoom(newZoom) {
+      currentZoom = Math.min(Math.max(newZoom, 0.88), 1.30);
+      wrapper.style.fontSize = (11 * currentZoom) + 'pt';
+      zoomText.textContent = Math.round(currentZoom * 100) + '%';
+      localStorage.setItem('academic_cv_zoom', currentZoom);
+    }
+
+    function adjustCvZoom(delta) {
+      updateCvZoom(currentZoom + delta);
+    }
+
+    function resetCvZoom() {
+      updateCvZoom(1.0);
+    }
+
+    // Load saved zoom if previously chosen
+    const savedZoom = localStorage.getItem('academic_cv_zoom');
+    if (savedZoom) {
+      updateCvZoom(parseFloat(savedZoom));
+    }
+  </script>
+
+</body>
+</html>

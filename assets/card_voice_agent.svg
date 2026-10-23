@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="glow-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <filter id="shadow1" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#38bdf8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <rect width="400" height="180" fill="url(#bg1)"/>
+  
+  <!-- Subtle Grid Lines -->
+  <g stroke="#1e293b" stroke-width="1" opacity="0.6">
+    <line x1="0" y1="45" x2="400" y2="45"/>
+    <line x1="0" y1="90" x2="400" y2="90"/>
+    <line x1="0" y1="135" x2="400" y2="135"/>
+    <line x1="100" y1="0" x2="100" y2="180"/>
+    <line x1="200" y1="0" x2="200" y2="180"/>
+    <line x1="300" y1="0" x2="300" y2="180"/>
+  </g>
+  
+  <!-- Waveform / Audio signal -->
+  <path d="M 30 90 Q 50 40, 70 90 T 110 90 T 150 50 T 180 130 T 210 90 T 260 60 T 300 110 T 340 80 T 370 90" 
+        fill="none" stroke="url(#glow-cyan)" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+
+  <!-- Left Node: Unity Game -->
+  <rect x="36" y="58" width="80" height="64" rx="8" fill="#131d36" stroke="#2563eb" stroke-width="1.5" filter="url(#shadow1)"/>
+  <text x="76" y="88" fill="#93c5fd" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">Unity</text>
+  <text x="76" y="104" fill="#64748b" font-family="sans-serif" font-size="9" text-anchor="middle">Serious Game</text>
+
+  <!-- Connection: WebSocket -->
+  <line x1="116" y1="90" x2="160" y2="90" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <polygon points="160,87 166,90 160,93" fill="#38bdf8"/>
+  <text x="138" y="82" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">ws://</text>
+
+  <!-- Middle Node: Voice Agent Bridge -->
+  <rect x="166" y="52" width="94" height="76" rx="8" fill="#18233c" stroke="#818cf8" stroke-width="1.5" filter="url(#shadow1)"/>
+  <text x="213" y="82" fill="#c7d2fe" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="bold" text-anchor="middle">Voice Bridge</text>
+  <text x="213" y="98" fill="#818cf8" font-family="sans-serif" font-size="8.5" text-anchor="middle">&lt;sub-second&gt;</text>
+  <text x="213" y="112" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">ASR → TTS</text>
+
+  <!-- Connection to LLM -->
+  <line x1="260" y1="90" x2="294" y2="90" stroke="#818cf8" stroke-width="1.5"/>
+  <polygon points="294,87 300,90 294,93" fill="#818cf8"/>
+
+  <!-- Right Node: Multi-Agent LLM -->
+  <rect x="300" y="58" width="76" height="64" rx="8" fill="#131d36" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="338" y="88" fill="#e9d5ff" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="bold" text-anchor="middle">AutoGen</text>
+  <text x="338" y="104" fill="#a855f7" font-family="sans-serif" font-size="9" text-anchor="middle">Gemini LLM</text>
+
+  <!-- Badge Top Right -->
+  <rect x="306" y="12" width="76" height="20" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="344" y="25" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="8.5" text-anchor="middle">● Active R&amp;D</text>
+</svg>

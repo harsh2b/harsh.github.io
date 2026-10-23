@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harsh Kumar Bhojak | Academic Research Portfolio</title>
+  <meta name="description" content="Academic research portfolio of Harsh Kumar Bhojak — M.Tech Researcher at NIT Jalandhar specializing in Multimodal AI, Vision-Language Models, and Speech Voice Agents.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #090d16;
+      --bg-surface: #101726;
+      --bg-card: #131c31;
+      --bg-card-hover: #17223b;
+      --border: #1e2c45;
+      --border-focus: #3b82f6;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-subtle: #64748b;
+      --primary: #3b82f6;
+      --primary-hover: #2563eb;
+      --primary-glow: rgba(59, 130, 246, 0.15);
+      --accent: #8b5cf6;
+      --accent-glow: rgba(139, 92, 246, 0.15);
+      --badge-bg: rgba(59, 130, 246, 0.1);
+      --badge-border: rgba(59, 130, 246, 0.25);
+      --badge-text: #93c5fd;
+      --tag-bg: #1e293b;
+      --tag-text: #cbd5e1;
+      --code-bg: #030712;
+      --nav-bg: rgba(9, 13, 22, 0.85);
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+      --shadow-glow: 0 0 30px rgba(59, 130, 246, 0.12);
+    }
+
+    [data-theme="light"] {
+      --bg: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border: #e2e8f0;
+      --border-focus: #2563eb;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-subtle: #94a3b8;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --primary-glow: rgba(37, 99, 235, 0.08);
+      --accent: #7c3aed;
+      --accent-glow: rgba(124, 58, 237, 0.08);
+      --badge-bg: #eff6ff;
+      --badge-border: #bfdbfe;
+      --badge-text: #1d4ed8;
+      --tag-bg: #f1f5f9;
+      --tag-text: #334155;
+      --code-bg: #0f172a;
+      --nav-bg: rgba(248, 250, 252, 0.85);
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.07);
+      --shadow-glow: 0 0 25px rgba(37, 99, 235, 0.06);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.68;
+      font-size: 15px;
+      letter-spacing: -0.01em;
+      transition: background-color 0.25s ease, color 0.25s ease;
+      min-height: 100vh;
+    }
+
+    /* Ambient lighting */
+    .ambient-glow {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1000px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, rgba(139, 92, 246, 0.04) 40%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--nav-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+    }
+
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text-main);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-brand span.dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      display: inline-block;
+      box-shadow: 0 0 8px #10b981;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-cv-btn {
+      background: var(--primary);
+      color: #fff !important;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-weight: 600 !important;
+      transition: all 0.2s ease;
+    }
+    .nav-cv-btn:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    .theme-toggle-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+    }
+    .theme-toggle-btn:hover {
+      border-color: var(--primary);
+      transform: scale(1.05);
+    }
+
+    /* Container */
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 48px 24px 100px;
+    }
+
+    /* Hero Card */
+    .hero-card {
+      background: linear-gradient(145deg, var(--bg-surface), var(--bg-card));
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 38px 42px;
+      margin-bottom: 48px;
+      box-shadow: var(--shadow-md), 0 0 0 1px rgba(255, 255, 255, 0.04);
+      display: flex;
+      gap: 36px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-photo-wrap {
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .hero-photo {
+      width: 154px;
+      height: 154px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(59, 130, 246, 0.35);
+      box-shadow: 0 0 0 5px var(--primary-glow), var(--shadow-md);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .hero-photo:hover {
+      transform: scale(1.02);
+      border-color: var(--primary);
+    }
+
+    .status-ring {
+      position: absolute;
+      bottom: 6px;
+      right: 6px;
+      background: #10b981;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 3px solid var(--bg-surface);
+      box-shadow: 0 0 10px #10b981;
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .hero-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .badge-open {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--badge-bg);
+      border: 1px solid var(--badge-border);
+      color: var(--badge-text);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+    .badge-open span.pulse {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 6px #10b981;
+    }
+
+    .badge-verified {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34d399;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    h1.hero-name {
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    .hero-affiliation {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+    .hero-affiliation strong {
+      color: var(--text-main);
+    }
+
+    .hero-bio {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+    .hero-bio strong {
+      color: var(--text-main);
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .link-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .link-pill:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .link-pill.highlight {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #ffffff;
+      border: none;
+    }
+    .link-pill.highlight:hover {
+      box-shadow: 0 4px 16px var(--primary-glow);
+      color: #ffffff;
+      filter: brightness(1.1);
+    }
+
+    .link-pill svg {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+    }
+
+    /* Section Headers */
+    .section-wrap {
+      margin-top: 56px;
+    }
+
+    .sec-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+    }
+
+    h2.sec-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h2.sec-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      border-radius: 2px;
+      background: linear-gradient(to bottom, var(--primary), var(--accent));
+    }
+
+    .sec-sub {
+      font-size: 0.84rem;
+      color: var(--text-subtle);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Research Pillars Grid */
+    .pillars-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .pillar-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pillar-box:hover {
+      border-color: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .pillar-icon-wrap {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--badge-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: 14px;
+      border: 1px solid var(--badge-border);
+    }
+
+    .pillar-box h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+
+    .pillar-box p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* Publication Card */
+    .paper-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 26px;
+      position: relative;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .paper-card:hover {
+      border-color: var(--border-focus);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .paper-venue-badge {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--badge-text);
+      background: var(--badge-bg);
+      border: 1px solid var(--badge-border);
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .paper-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.38;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+
+    .paper-authors {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .paper-authors strong.author-self {
+      color: var(--text-main);
+      text-decoration: underline;
+      font-weight: 700;
+    }
+
+    .paper-venue {
+      font-family: 'Newsreader', serif;
+      font-style: italic;
+      font-size: 1.08rem;
+      color: var(--text-main);
+      margin-bottom: 14px;
+    }
+
+    .paper-abstract {
+      background: var(--bg-card);
+      border-left: 3px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      font-size: 0.89rem;
+      color: var(--text-muted);
+      line-height: 1.62;
+      margin-bottom: 18px;
+    }
+
+    .paper-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .paper-btn {
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 6px 13px;
+      border-radius: 7px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      transition: all 0.15s ease;
+    }
+    .paper-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    .paper-btn.primary-btn {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .paper-btn.primary-btn:hover {
+      background: var(--primary-hover);
+      color: #fff;
+    }
+
+    /* BibTeX Drawer */
+    .bibtex-box {
+      display: none;
+      margin-top: 14px;
+      background: var(--code-bg);
+      color: #e2e8f0;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      position: relative;
+    }
+    .bibtex-code {
+      white-space: pre-wrap;
+      word-break: break-all;
+      line-height: 1.5;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .copy-btn:hover { background: rgba(255, 255, 255, 0.25); }
+
+    /* Selected Research Systems & Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .project-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .project-thumb-wrap {
+      width: 100%;
+      height: 190px;
+      overflow: hidden;
+      background: #000;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover .project-thumb {
+      transform: scale(1.03);
+    }
+
+    .project-body {
+      padding: 22px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .proj-category {
+      font-size: 0.72rem;
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .project-body h3 {
+      font-size: 1.08rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+
+    .project-body p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.58;
+      margin-bottom: 16px;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 16px;
+    }
+
+    .tag-chip {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 0.72rem;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    /* Experience & Education Timelines */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .tl-section-label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-top: 28px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tl-section-label:first-child {
+      margin-top: 0;
+    }
+
+    .timeline-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px 26px;
+      transition: border-color 0.2s ease;
+    }
+    .timeline-item:hover {
+      border-color: var(--border-focus);
+    }
+
+    .tl-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+    .tl-badge.academic {
+      background: rgba(16, 185, 129, 0.1);
+      color: #34d399;
+      border-color: rgba(16, 185, 129, 0.25);
+    }
+    .tl-badge.industry {
+      background: rgba(59, 130, 246, 0.1);
+      color: #93c5fd;
+      border-color: rgba(59, 130, 246, 0.25);
+    }
+
+    .tl-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
+    }
+
+    .tl-title {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .tl-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .tl-role {
+      font-size: 0.92rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .tl-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .tl-desc ul {
+      margin-left: 18px;
+      margin-top: 6px;
+    }
+    .tl-desc li {
+      margin-bottom: 4px;
+    }
+
+    /* CV Banner */
+    .cv-banner-card {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px 28px;
+      text-align: center;
+      margin-top: 60px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .cv-banner-card h3 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+
+    .cv-banner-card p {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      max-width: 580px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+
+    .cv-btn-group {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 80px;
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+      text-align: center;
+      font-size: 0.86rem;
+      color: var(--text-subtle);
+    }
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 860px) {
+      .pillars-container, .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 20px;
+      }
+      .hero-links {
+        justify-content: center;
+      }
+      .hero-badges {
+        justify-content: center;
+      }
+      .nav-links {
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ambient-glow"></div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">
+        <span class="dot"></span> Harsh Kumar Bhojak
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#research">Research Systems</a></li>
+        <li><a href="#experience">Trajectory</a></li>
+        <li><a href="academic_cv.html" target="_blank" class="nav-cv-btn">Academic CV ↗</a></li>
+        <li>
+          <button class="theme-toggle-btn" id="themeToggle" title="Toggle Theme">
+            <span id="themeEmoji">☀️</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- Hero Card -->
+    <header class="hero-card">
+      <div class="hero-photo-wrap">
+        <img class="hero-photo" src="profile.jpeg" alt="Harsh Kumar Bhojak">
+        <div class="status-ring" title="Open to PhD Opportunities"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badges">
+          <span class="badge-open"><span class="pulse"></span> Open to PhD Opportunities (Fall 2027)</span>
+        </div>
+        <h1 class="hero-name">Harsh Kumar Bhojak</h1>
+        <div class="hero-affiliation">
+          Graduate Researcher · <strong>NIT Jalandhar</strong> (Signal Processing and Machine Learning)
+        </div>
+        <p class="hero-bio">
+          I develop <strong>low-latency Voice AI agents</strong>, build intelligent architectures for <strong>interactive virtual worlds &amp; serious games</strong>, and investigate multimodal foundation models for <strong>assistive clinical therapy</strong>.
+        </p>
+        <div class="hero-links">
+          <a class="link-pill highlight" href="academic_cv.html" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM6 4h7v5h5v11H6V4z"/></svg>
+            Academic CV (Print / PDF)
+          </a>
+          <a class="link-pill" href="https://scholar.google.com/citations?user=AERr9JFapsS7cVs0AKu8EHFLM03utnpNz85mBmw8NIb3SSI81c03wESY0JJN" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4 3.18v6.78h4v-3.64l4 3.18 12-9.5z"/></svg>
+            Google Scholar
+          </a>
+          <a class="link-pill" href="https://github.com/harsh2b" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a class="link-pill" href="https://www.linkedin.com/in/harshkb2" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            LinkedIn
+          </a>
+          <a class="link-pill" href="mailto:harshbhojak5@gmail.com">
+            <svg viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.259l4.616-3.74v9.452l-4.616-5.712z"/></svg>
+            Email
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- About & Research Pillars -->
+    <section class="section-wrap" id="about">
+      <div class="sec-head">
+        <h2 class="sec-title">Research Vision & Core Pillars</h2>
+        <span class="sec-sub">Focus Areas</span>
+      </div>
+      <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.68; margin-bottom: 20px;">
+        My doctoral research focuses on the convergence of <strong>Real-Time Interactive AI Systems</strong>, <strong>Virtual Worlds &amp; Serious Games</strong>, and <strong>Voice-Enabled Multimodal Agent Architectures</strong>. Grounded in my mathematical foundation in Signal Processing and Machine Learning, I design low-latency, event-driven agent architectures that perceive streaming inputs, navigate conversational turn-taking, and adapt behavior in clinical and educational virtual environments.
+      </p>
+
+      <div class="pillars-container">
+        <!-- Pillar 1 -->
+        <div class="pillar-box">
+          <div class="pillar-icon-wrap">🎮</div>
+          <h3>Real-Time Interactive AI &amp; Serious Games</h3>
+          <p>
+            Building intelligent non-player characters (NPCs) and dynamic behavioral scaffolding inside interactive virtual environments (Unity 3D) via event-driven WebSockets, replacing static scripted game trees with adaptive agency.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar-box">
+          <div class="pillar-icon-wrap">🎙️</div>
+          <h3>Voice-Enabled Multimodal Agent Architectures</h3>
+          <p>
+            Designing event-driven streaming voice loops (<code>ASR &rarr; LLM &rarr; TTS</code>) with sub-second latency, natural turn-taking coordination, and adaptive persona modulation for clinical assistive therapy (Autism Spectrum Disorder / ASD).
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-box">
+          <div class="pillar-icon-wrap">🧠</div>
+          <h3>Signal Processing &amp; Applied Machine Learning</h3>
+          <p>
+            Rigorous mathematical grounding in stochastic processes, statistical signal estimation, temporal state sequences, edge computer vision, and systematic evaluation of multimodal foundation models (Vision-Language Models).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Peer-Reviewed Publications -->
+    <section class="section-wrap" id="publications">
+      <div class="sec-head">
+        <h2 class="sec-title">Peer-Reviewed Publications</h2>
+        <span class="sec-sub">IEEE Proceedings</span>
+      </div>
+
+      <div class="paper-card">
+        <span class="paper-venue-badge">IEEE ICSCCC 2026 · Conference Paper</span>
+        <h3 class="paper-title">LLM-Powered Real-Time Voice Agent for Task-Guided Practice in Serious Games for ASD</h3>
+        <div class="paper-authors">
+          <strong class="author-self">Harsh Kumar Bhojak</strong>, Arun Khosla, Neha Sharma
+        </div>
+        <div class="paper-venue">
+          Proceedings of the IEEE 5th International Conference on Secure Cyber Computing and Communications (ICSCCC), 2026
+        </div>
+        <div class="paper-abstract">
+          <strong>Abstract:</strong> Serious games provide structured behavioral interventions for children with Autism Spectrum Disorder (ASD), yet static instructional engines frequently lead to task abandonment. We present an event-driven speech-to-speech conversational architecture integrating AutoGen, Gemini, and Unity via low-latency WebSockets. The system dynamically adapts its instructional scaffolding to the child's real-time behavioral state, demonstrating a 30% improvement in task completion rate without modifying foundational game rules.
+        </div>
+        <div class="paper-actions">
+          <a class="paper-btn primary-btn" href="https://scholar.google.com/citations?user=AERr9JFapsS7cVs0AKu8EHFLM03utnpNz85mBmw8NIb3SSI81c03wESY0JJN" target="_blank">
+            Google Scholar Entry ↗
+          </a>
+          <a class="paper-btn" href="https://github.com/harsh2b/Voice_agent_connector" target="_blank">
+            Unity Bridge Code ↗
+          </a>
+          <a class="paper-btn" href="https://github.com/harsh2b/voice_agent_production" target="_blank">
+            Production Engine ↗
+          </a>
+          <button class="paper-btn" onclick="toggleBibtex()">
+            BibTeX Citation
+          </button>
+        </div>
+
+        <div class="bibtex-box" id="bibtexBox">
+          <button class="copy-btn" onclick="copyBibtex()">Copy</button>
+          <div class="bibtex-code" id="bibtexText">@inproceedings{bhojak2026voiceagent,
+  author    = {Bhojak, Harsh Kumar and Khosla, Arun and Sharma, Neha},
+  title     = {LLM-Powered Real-Time Voice Agent for Task-Guided Practice in Serious Games for ASD},
+  booktitle = {Proceedings of the IEEE 5th International Conference on Secure Cyber Computing and Communications (ICSCCC)},
+  year      = {2026},
+  publisher = {IEEE}
+}</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Systems & Projects -->
+    <section class="section-wrap" id="research">
+      <div class="sec-head">
+        <h2 class="sec-title">Selected Systems & Projects</h2>
+        <span class="sec-sub">Research Prototypes & Software</span>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Voice Agent -->
+        <div class="project-card">
+          <div class="project-thumb-wrap">
+            <img class="project-thumb" src="voice-agent.png" alt="ASD Voice Agent Therapy">
+          </div>
+          <div class="project-body">
+            <div>
+              <div class="proj-category">Assistive Voice AI · Unity</div>
+              <h3>Agentic Voice Agent for ASD Therapy</h3>
+              <p>
+                Real-time vocal scaffolding engine with AutoGen multi-agent coordination, sub-second latency streaming, and Unity serious game integration. Boosted task completion by 30%.
+              </p>
+            </div>
+            <div>
+              <div class="tag-row">
+                <span class="tag-chip">AutoGen</span>
+                <span class="tag-chip">WebSockets</span>
+                <span class="tag-chip">Unity</span>
+                <span class="tag-chip">GCP</span>
+              </div>
+              <div class="paper-actions">
+                <a class="paper-btn" href="https://github.com/harsh2b/Voice_agent_connector" target="_blank">Unity Bridge ↗</a>
+                <a class="paper-btn" href="https://github.com/harsh2b/voice_agent_production" target="_blank">Engine ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Wellmate Healthcare -->
+        <div class="project-card">
+          <div class="project-thumb-wrap">
+            <img class="project-thumb" src="welllmate.png" alt="Wellmate Healthcare RAG">
+          </div>
+          <div class="project-body">
+            <div>
+              <div class="proj-category">Clinical RAG & Multimodal</div>
+              <h3>Wellmate Healthcare Companion</h3>
+              <p>
+                Clinical retrieval-augmented generation engine with PII redaction and OWASP GenAI guardrails, serving 1,200+ complex queries with &gt;96% contextual relevancy.
+              </p>
+            </div>
+            <div>
+              <div class="tag-row">
+                <span class="tag-chip">FastAPI</span>
+                <span class="tag-chip">Pinecone</span>
+                <span class="tag-chip">LangChain</span>
+                <span class="tag-chip">Cloud Run</span>
+              </div>
+              <div class="paper-actions">
+                <a class="paper-btn" href="https://github.com/harsh2b/RAG" target="_blank">Repository ↗</a>
+                <a class="paper-btn" href="https://github.com/harsh2b" target="_blank">Live Demo ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Reddit Persona Engine -->
+        <div class="project-card">
+          <div class="project-thumb-wrap">
+            <img class="project-thumb" src="Reditt.png" alt="Reddit Persona Generator">
+          </div>
+          <div class="project-body">
+            <div>
+              <div class="proj-category">User Modeling & Semantic NLP</div>
+              <h3>Reddit Persona Synthesis Engine</h3>
+              <p>
+                End-to-end user behavioral modeling pipeline scraping user engagement trajectories and applying LLMs to generate psychographic personas with Streamlit dashboard and CLI.
+              </p>
+            </div>
+            <div>
+              <div class="tag-row">
+                <span class="tag-chip">NLP</span>
+                <span class="tag-chip">Streamlit</span>
+                <span class="tag-chip">Embeddings</span>
+                <span class="tag-chip">Reddit API</span>
+              </div>
+              <div class="paper-actions">
+                <a class="paper-btn" href="https://github.com/harsh2b/reddit-persona-generator" target="_blank">Repository ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Movie Recommender -->
+        <div class="project-card">
+          <div class="project-thumb-wrap">
+            <img class="project-thumb" src="recommender.png" alt="Movie Recommender System">
+          </div>
+          <div class="project-body">
+            <div>
+              <div class="proj-category">Machine Learning & Similarity</div>
+              <h3>Movie Recommendation Engine</h3>
+              <p>
+                Collaborative and content-based recommendation platform utilizing vector similarity algorithms, feature tokenization, and containerized deployment for real-time recommendation querying.
+              </p>
+            </div>
+            <div>
+              <div class="tag-row">
+                <span class="tag-chip">Scikit-Learn</span>
+                <span class="tag-chip">TF-IDF</span>
+                <span class="tag-chip">Python</span>
+                <span class="tag-chip">Docker</span>
+              </div>
+              <div class="paper-actions">
+                <a class="paper-btn" href="https://github.com/harsh2b/Movie_recommender" target="_blank">Repository ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academic & Professional Background -->
+    <section class="section-wrap" id="experience">
+      <div class="sec-head">
+        <h2 class="sec-title">Academic & Professional Background</h2>
+        <span class="sec-sub">Education & Industry Experience</span>
+      </div>
+
+      <div class="timeline">
+        <!-- Subsection 1: Academic Background & Thesis Research -->
+        <div class="tl-section-label">
+          🎓 Academic Research & Degrees
+        </div>
+
+        <!-- Academic 1: NIT Jalandhar -->
+        <div class="timeline-item">
+          <div class="tl-header">
+            <div>
+              <span class="tl-title">Dr. B. R. Ambedkar National Institute of Technology (NIT) Jalandhar</span>
+              <span class="tl-badge academic">Academic Degree &amp; Thesis</span>
+            </div>
+            <span class="tl-date">2024 – 2026 (Expected)</span>
+          </div>
+          <div class="tl-role">Master of Technology (M.Tech) in Signal Processing and Machine Learning</div>
+          <div class="tl-desc">
+            <ul>
+              <li><strong>CGPA: 8.16 / 10.00</strong> · Recipient of MHRD / Ministry of Education Postgraduate Research Fellowship.</li>
+              <li><strong>Thesis Topic:</strong> <em>Real-Time Multimodal Voice and Language Interaction in Serious Games for Neurodevelopmental Support</em>.</li>
+              <li><strong>Academic Advisors &amp; Mentors:</strong> Prof. Arun Khosla (Thesis Advisor) &amp; Neha Sharma (PhD Scholar &amp; Co-Researcher).</li>
+              <li><strong>Rigorous Coursework:</strong> Advanced Signal Processing, Applied Linear Algebra and Optimization, Probability and Stochastic Processes, Statistical Signal Processing, Deep Learning, Acoustics and Audio Signal Processing.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Academic 2: IGEC Sagar -->
+        <div class="timeline-item">
+          <div class="tl-header">
+            <div>
+              <span class="tl-title">Indira Gandhi Engineering College (IGEC Sagar / RGPV)</span>
+              <span class="tl-badge academic">Undergraduate Degree</span>
+            </div>
+            <span class="tl-date">2017 – 2021</span>
+          </div>
+          <div class="tl-role">Bachelor of Technology (B.Tech) in Electrical Engineering</div>
+          <div class="tl-desc">
+            <ul>
+              <li><strong>CGPA: 7.50 / 10.00</strong> · Capstone Project: Closed-Loop Standalone 3-Phase Inverter Design and Simulation using PSIM &amp; MATLAB.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Subsection 2: Industry & Applied AI (Contract) -->
+        <div class="tl-section-label" style="margin-top: 32px;">
+          💼 Industry &amp; Applied R&amp;D Experience (Contract)
+        </div>
+
+        <!-- Industry 1: Innodata -->
+        <div class="timeline-item">
+          <div class="tl-header">
+            <div>
+              <span class="tl-title">Innodata Inc.</span>
+              <span class="tl-badge industry">Contract R&amp;D</span>
+            </div>
+            <span class="tl-date">Jun. 2026 – Present</span>
+          </div>
+          <div class="tl-role">Senior Associate – Vision-Language Models (VLMs) (Remote, Contract)</div>
+          <div class="tl-desc">
+            <ul>
+              <li>Designing complex multi-step spatial and logical reasoning benchmarks for evaluating state-of-the-art multimodal Vision-Language Models (VLMs).</li>
+              <li>Engineering high-fidelity multimodal reasoning datasets assessing cross-modal grounding, geometric understanding, and compositional generalization in leading frontier AI labs.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Industry 2: Quality Kiosk -->
+        <div class="timeline-item">
+          <div class="tl-header">
+            <div>
+              <span class="tl-title">Quality Kiosk Technologies</span>
+              <span class="tl-badge industry">Contract Consulting</span>
+            </div>
+            <span class="tl-date">Sep. 2025 – Dec. 2025</span>
+          </div>
+          <div class="tl-role">AI Research Consultant – Generative AI (Remote, Contract)</div>
+          <div class="tl-desc">
+            <ul>
+              <li>Standardized 20+ automated evaluation metrics to quantify hallucination rates, semantic drift, and instruction fidelity in generative model pipelines.</li>
+              <li>Conducted systematic adversarial red-teaming and OWASP GenAI Top 10 security audits to prevent prompt injection and PII leakage.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academic CV Callout Card -->
+    <div class="cv-banner-card">
+      <h3>Curriculum Vitae</h3>
+      <p>
+        My complete academic CV includes comprehensive coursework details, research methodologies, publication citations, and academic advisor contacts formatted for international PhD admissions committees.
+      </p>
+      <div class="cv-btn-group">
+        <a class="link-pill highlight" href="academic_cv.html" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM6 4h7v5h5v11H6V4z"/></svg>
+          Open Academic CV (Print / PDF)
+        </a>
+        <a class="link-pill" href="academic_cv.tex" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5L4.5 9.75 2 11l10 5 10-5-2.5-1.25L12 13.5z"/></svg>
+          Download LaTeX Source (.tex)
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2026 Harsh Kumar Bhojak · National Institute of Technology Jalandhar</p>
+      <p style="margin-top: 6px;">
+        Profile verified on <a href="https://scholar.google.com/citations?user=AERr9JFapsS7cVs0AKu8EHFLM03utnpNz85mBmw8NIb3SSI81c03wESY0JJN" target="_blank">Google Scholar</a> · Source on <a href="https://github.com/harsh2b" target="_blank">GitHub</a>
+      </p>
+    </footer>
+
+  </div>
+
+  <script>
+    // Theme Toggle Functionality
+    const themeBtn = document.getElementById('themeToggle');
+    const themeEmoji = document.getElementById('themeEmoji');
+    const html = document.documentElement;
+
+    // Check saved theme or system preference
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', savedTheme);
+    themeEmoji.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+
+    themeBtn.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const target = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', target);
+      localStorage.setItem('theme', target);
+      themeEmoji.textContent = target === 'dark' ? '☀️' : '🌙';
+    });
+
+    // BibTeX Drawer Toggle
+    function toggleBibtex() {
+      const box = document.getElementById('bibtexBox');
+      box.style.display = box.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Copy BibTeX to Clipboard
+    function copyBibtex() {
+      const text = document.getElementById('bibtexText').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('BibTeX citation copied to clipboard!');
+      });
+    }
+  </script>
+
+</body>
+</html>

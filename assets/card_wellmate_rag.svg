@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07191e"/>
+      <stop offset="100%" stop-color="#0c2329"/>
+    </linearGradient>
+    <linearGradient id="glow-teal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="180" fill="url(#bg2)"/>
+  
+  <!-- Subtle Grid -->
+  <g stroke="#133842" stroke-width="1" opacity="0.6">
+    <line x1="0" y1="45" x2="400" y2="45"/>
+    <line x1="0" y1="90" x2="400" y2="90"/>
+    <line x1="0" y1="135" x2="400" y2="135"/>
+    <line x1="100" y1="0" x2="100" y2="180"/>
+    <line x1="200" y1="0" x2="200" y2="180"/>
+    <line x1="300" y1="0" x2="300" y2="180"/>
+  </g>
+
+  <!-- Left: Medical Docs / Query -->
+  <rect x="28" y="58" width="84" height="64" rx="8" fill="#0d2e35" stroke="#0d9488" stroke-width="1.5"/>
+  <text x="70" y="86" fill="#99f6e4" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="bold" text-anchor="middle">Clinical QA</text>
+  <text x="70" y="102" fill="#5eead4" font-family="sans-serif" font-size="8.5" text-anchor="middle">PII Redacted</text>
+
+  <!-- Arrow -->
+  <line x1="112" y1="90" x2="152" y2="90" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <polygon points="152,87 158,90 152,93" fill="#14b8a6"/>
+  <text x="132" y="82" fill="#2dd4bf" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">dense</text>
+
+  <!-- Middle: Vector Index (Pinecone / Chroma) -->
+  <rect x="158" y="52" width="100" height="76" rx="8" fill="#103a43" stroke="#06b6d4" stroke-width="1.5"/>
+  <text x="208" y="82" fill="#cffafe" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="bold" text-anchor="middle">Hybrid Search</text>
+  <text x="208" y="98" fill="#38bdf8" font-family="sans-serif" font-size="8.5" text-anchor="middle">Pinecone + RAG</text>
+  <text x="208" y="112" fill="#5eead4" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">&gt;96% Relevance</text>
+
+  <!-- Arrow -->
+  <line x1="258" y1="90" x2="294" y2="90" stroke="#06b6d4" stroke-width="1.5"/>
+  <polygon points="294,87 300,90 294,93" fill="#06b6d4"/>
+
+  <!-- Right: Guardrailed Medical Answer -->
+  <rect x="300" y="58" width="76" height="64" rx="8" fill="#0d2e35" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="338" y="86" fill="#bae6fd" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="bold" text-anchor="middle">Safe LLM</text>
+  <text x="338" y="102" fill="#38bdf8" font-family="sans-serif" font-size="8.5" text-anchor="middle">Cloud Run</text>
+
+  <!-- Badge Top Right -->
+  <rect x="290" y="12" width="92" height="20" rx="4" fill="#082b32" stroke="#115e59" stroke-width="1"/>
+  <text x="336" y="25" fill="#2dd4bf" font-family="'JetBrains Mono', monospace" font-size="8.5" text-anchor="middle">● 1,200+ Queries</text>
+</svg>
