@@ -1,0 +1,165 @@
+%----------------------------------------------------------------------------------------
+% Professional Resume - Harsh Kumar Bhojak
+% Target: Research Engineer - Egocentric Perception Models / Computer Vision & Multimodal
+% Format: Strict 1-Page Budget, A4 / Letter Compatible, ATS-Friendly Standard LaTeX
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.45in,top=0.38in,bottom=0.38in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{microtype}
+
+% Color definitions
+\definecolor{primary}{RGB}{15, 23, 42}       % Slate Dark
+\definecolor{accent}{RGB}{30, 64, 175}       % Royal Blue
+\definecolor{textdark}{RGB}{30, 41, 59}      % Charcoal Text
+\definecolor{rulecolor}{RGB}{203, 213, 225}  % Slate 300 Divider
+
+% Hyperlink configuration
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    urlcolor=accent,
+    pdftitle={Resume - Harsh Kumar Bhojak},
+    pdfauthor={Harsh Kumar Bhojak}
+}
+
+% Section title formatting
+\titleformat{\section}
+  {\large\bfseries\scshape\raggedright\color{primary}}
+  {}{0em}
+  {}[\color{rulecolor}\titlerule]
+
+\titlespacing*{\section}{0pt}{4pt}{2.5pt}
+
+% Bullet list configuration for compact 1-page fit
+\setlist[itemize]{leftmargin=1.1em, itemsep=1.2pt, topsep=1.2pt, parsep=0pt, partopsep=0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%   HEADER / CONTACT INFO
+%----------------------------------------------------------------------------------------
+\begin{center}
+    {\LARGE \textbf{\textsc{Harsh Kumar Bhojak}}} \\[2.5pt]
+    \small
+    +91-9630499150 \,$\vert$\, 
+    \href{mailto:harshbhojak5@gmail.com}{harshbhojak5@gmail.com} \,$\vert$\, 
+    \href{https://linkedin.com/in/harshkb2}{LinkedIn: \texttt{harshkb2}} \,$\vert$\, 
+    \href{https://github.com/harsh2b}{GitHub: \texttt{harsh2b}} \,$\vert$\, 
+    \href{https://harsh2b.github.io/harsh.github.io/}{Portfolio} \\[1.5pt]
+    \footnotesize Chhindwara (M.P.), India $\cdot$ Open to Relocate to Bangalore (WFO)
+\end{center}
+
+\vspace{-6pt}
+
+%----------------------------------------------------------------------------------------
+%   SUMMARY
+%----------------------------------------------------------------------------------------
+\section*{Summary}
+\noindent\small
+\textbf{Machine Learning \& Computer Vision Engineer} (M.Tech in Signal Processing \& ML, NIT Jalandhar) specializing in Multimodal Perception, Vision-Language Models (VLMs), and Real-Time Video Systems. Hands-on experience developing real-time ocular/gaze tracking, temporal video classification architectures, and OpenCV edge pipelines. Published IEEE first-author with rigorous mathematical foundations in state estimation (Kalman filters), applied linear algebra, and PyTorch model benchmarking.
+
+%----------------------------------------------------------------------------------------
+%   EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section*{Professional Experience}
+
+\noindent\textbf{Senior Associate --- Vision-Language Models (VLMs)} \hfill \textbf{Jun. 2026 -- Present} \\
+\textit{Innodata Inc.} \hfill \textit{Remote (Contract)}
+\begin{itemize}
+    \item Architected multi-step spatial-geometric reasoning benchmarks and evaluation protocols for production-grade Vision-Language Models (VLMs).
+    \item Curated high-fidelity multimodal datasets assessing cross-modal visual grounding, spatial object relations, and failure-mode quantification.
+    \item Engineered systematic model validation pipelines replacing heuristic scoring with quantitative grounding and consistency metrics.
+\end{itemize}
+
+\vspace{2.5pt}
+\noindent\textbf{AI Research Consultant --- Generative AI} \hfill \textbf{Sep. 2025 -- Dec. 2025} \\
+\textit{Quality Kiosk Technologies} \hfill \textit{Remote (Contract)}
+\begin{itemize}
+    \item Implemented 20+ automated evaluation metrics to quantify model stability, response drift, and precision consistency.
+    \item Built high-throughput, low-latency API wrappers and containerized model inference backends using FastAPI and Docker.
+    \item Conducted adversarial red-teaming and safety audits adhering to OWASP GenAI Top 10 to eliminate prompt vulnerabilities and data leakage.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%   PROJECTS
+%----------------------------------------------------------------------------------------
+\section*{Selected Projects}
+
+\noindent\textbf{Multimodal Interactive Agent with Real-Time Gaze Tracking} \hfill \textit{2025 -- 2026} \\
+\small\textit{Tech: PyTorch, OpenCV, Gaze/Eye Tracking, AutoGen, Unity 3D, WebSockets} \hfill \textbf{[IEEE ICSCCC 2026]}
+\begin{itemize}
+    \item Engineered an event-driven multimodal interaction pipeline combining \textbf{real-time eye and gaze tracking} with conversational AI for children with ASD.
+    \item Tracked ocular keypoints and gaze fixation coordinates to dynamically modulate task difficulty and conversational pacing in 3D serious games.
+    \item Demonstrated a 30\% increase in patient task completion; published as first author in \textbf{IEEE ICSCCC 2026} (Indexed in IEEE Xplore).
+\end{itemize}
+
+\vspace{2.5pt}
+\noindent\textbf{Lightweight Temporal Video Perception \& Gated Attention Classifier} \hfill \textit{2026} \\
+\small\textit{Tech: PyTorch, MobileNetV3-Small, Kinetic Gated Attention MIL, OpenCV, Video-MME} \hfill \href{https://github.com/harsh2b/problem-1-1-video-classifier}{\textbf{[GitHub Repo]}}
+\begin{itemize}
+    \item Engineered an ultra-compact multimodal router (\textbf{351k parameters, 1.3 MB footprint}) combining 8 sparse keyframe embeddings with kinetic motion deltas ($|I_t - I_{t-1}|$ and Sobel gradients).
+    \item Implemented Kinetic Gated Attention MIL pooling, achieving \textbf{0.806 Macro-F1 / 73.9\% Top-1 Accuracy} (4.4$\times$ lift over baseline; \textbf{1.0 F1 on Esports \& Podcasts}, \textbf{0.80 F1 on Wildlife}).
+    \item Delivered \textbf{0.63 ms p50 CPU latency} (>1,200 inferences/sec) with zero GPU requirement, outperforming 7B VLMs by \textbf{>160$\times$ on PEAS Pareto efficiency}.
+\end{itemize}
+
+\vspace{2.5pt}
+\noindent\textbf{Real-Time Helmet Detection \& Video Stream Processing} \hfill \textit{2025} \\
+\small\textit{Tech: Python, OpenCV, Object Detection, Video Stream Processing}
+\begin{itemize}
+    \item Developed an automated computer vision pipeline for real-time rider and safety helmet compliance detection on continuous video feeds.
+    \item Implemented contour analysis, bounding box estimation, and multi-frame tracking robust to motion blur, lighting variance, and fast occlusion.
+    \item Optimized frame processing throughput using OpenCV to enable low-latency inference on streaming video feeds.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%   PUBLICATIONS
+%----------------------------------------------------------------------------------------
+\section*{Peer-Reviewed Publication}
+\noindent\small
+\textbf{"LLM-Powered Real-Time Voice Agent for Task-Guided Practice in Serious Games for ASD"} \hfill \textbf{IEEE ICSCCC 2026} \\
+\textit{Proceedings of the IEEE 5th International Conference on Secure Cyber Computing and Communications}. Indexed in IEEE Xplore.
+
+%----------------------------------------------------------------------------------------
+%   EDUCATION
+%----------------------------------------------------------------------------------------
+\section*{Education}
+
+\noindent\textbf{Dr. B. R. Ambedkar National Institute of Technology (NIT) Jalandhar} \hfill \textbf{2024 -- 2026} \\
+\textit{Master of Technology (M.Tech) in Signal Processing and Machine Learning} \hfill \textbf{CGPA: 8.16 / 10.00} \\
+\footnotesize\textbf{Relevant Coursework:} Advanced Signal Processing, Applied Linear Algebra \& Optimization, Probability \& Stochastic Processes, Statistical Signal Processing, Deep Learning.
+
+\vspace{2pt}
+\noindent\textbf{Indira Gandhi Engineering College (IGEC Sagar / RGPV)} \hfill \textbf{2017 -- 2021} \\
+\textit{Bachelor of Technology (B.Tech) in Electrical Engineering} \hfill \textbf{CGPA: 7.50 / 10.00}
+
+%----------------------------------------------------------------------------------------
+%   TECHNICAL SKILLS
+%----------------------------------------------------------------------------------------
+\section*{Technical Skills}
+\noindent\small
+\begin{itemize}[leftmargin=1.1em, itemsep=0.8pt]
+    \item \textbf{Computer Vision \& Perception:} Real-Time Eye \& Gaze Tracking, Facial Keypoints, Temporal Video Modeling, Object Detection (OpenCV), Camera Geometry Foundations (Intrinsics/Extrinsics, Epipolar Geometry), Video Stream Processing.
+    \item \textbf{Deep Learning \& Multimodal AI:} PyTorch, TorchVision, Gated Attention Pooling, Vision-Language Models (VLMs), Spatial Reasoning Benchmarks, Multimodal Evaluation, Transformers, Hugging Face.
+    \item \textbf{Languages, Tools \& Systems:} Python, MATLAB, C/C++, JavaScript, OpenCV, FastAPI, Docker, Linux/Bash, Git, AWS / GCP, ROS / MCAP data structures.
+    \item \textbf{Mathematical Foundations:} Digital \& Statistical Signal Processing, State Estimation (Kalman Filtering), Applied Linear Algebra \& Matrix Optimization, Stochastic Processes.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%   HONORS & ACHIEVEMENTS
+%----------------------------------------------------------------------------------------
+\section*{Honors \& Achievements}
+\noindent\small
+\textbf{GATE 2024 Qualified} $\cdot$ \textbf{First-Author IEEE Publication} $\cdot$ \textbf{MHRD Postgraduate Fellowship} (NIT Jalandhar) $\cdot$ \textbf{20+ Freelance Software Deployments}
+
+\end{document}

@@ -1,0 +1,158 @@
+%----------------------------------------------------------------------------------------
+% Master Resume - Harsh Kumar Bhojak
+% Target: AI Engineer / AI Product Developer
+% Format: Strict 1-Page Budget, Exact User Typography Specifications
+% - Body: 10.5 pt | Headings: 11.5 pt | Name: 20 pt | Font: Latin Modern | Paper: A4 | Margin: 0.52 in
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.52in,top=0.42in,bottom=0.42in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{microtype}
+
+% Color definitions
+\definecolor{primary}{RGB}{15, 23, 42}       % Slate Dark
+\definecolor{accent}{RGB}{30, 64, 175}       % Royal Blue
+\definecolor{textdark}{RGB}{30, 41, 59}      % Charcoal Text
+\definecolor{rulecolor}{RGB}{203, 213, 225}  % Slate 300 Divider
+
+% Hyperlink configuration
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    urlcolor=accent,
+    pdftitle={Resume - Harsh Kumar Bhojak - AI Engineer},
+    pdfauthor={Harsh Kumar Bhojak}
+}
+
+% Section title formatting: Exact 11.5 pt, Bold, Small Caps
+\titleformat{\section}
+  {\fontsize{11.5pt}{13.5pt}\bfseries\scshape\raggedright\color{primary}}
+  {}{0em}
+  {}[\color{rulecolor}\titlerule]
+
+\titlespacing*{\section}{0pt}{4pt}{2.5pt}
+
+% Bullet list configuration: Exact 10.5 pt Body
+\setlist[itemize]{leftmargin=1.15em, itemsep=1pt, topsep=1.5pt, parsep=0pt, partopsep=0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+\fontsize{10.5pt}{13pt}\selectfont
+
+%----------------------------------------------------------------------------------------
+%   HEADER / CONTACT INFO (Name: 20 pt)
+%----------------------------------------------------------------------------------------
+\begin{center}
+    {\fontsize{20pt}{23pt}\bfseries\scshape Harsh Kumar Bhojak} \\[2.5pt]
+    \fontsize{9.5pt}{11.5pt}\selectfont
+    +91-9630499150 \,$\vert$\, 
+    \href{mailto:harshbhojak5@gmail.com}{harshbhojak5@gmail.com} \,$\vert$\, 
+    \href{https://linkedin.com/in/harshkb2}{LinkedIn: \texttt{harshkb2}} \,$\vert$\, 
+    \href{https://github.com/harsh2b}{GitHub: \texttt{harsh2b}} \,$\vert$\, 
+    \href{https://harsh2b.github.io/harsh.github.io/}{Portfolio: \texttt{harshkb.dev}} \\[1.5pt]
+    \footnotesize Open to Remote $\cdot$ Relocation: Bengaluru / Pune / Hyderabad $\cdot$ Notice Period: 0 Days (Immediate Joiner)
+\end{center}
+
+\vspace{-6pt}
+
+%----------------------------------------------------------------------------------------
+%   SUMMARY
+%----------------------------------------------------------------------------------------
+\section*{Summary}
+\noindent
+\textbf{AI Engineer \& Product Developer} with hands-on experience building and deploying production AI systems. Shipped real-time conversational voice agents, healthcare RAG applications serving 500+ monthly users, and computer vision pipelines using PyTorch, FastAPI, and GCP. Published IEEE first author with proven expertise in foundation model evaluation, Git version control, and cloud deployment.
+
+%----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section*{Work Experience}
+
+\noindent\textbf{Senior Associate --- AI Training \& VLM Evaluation} \hfill \textbf{Jun. 2026 -- Sep. 2026} \\
+\textit{Innodata Inc. (Client: Frontier AI Research Lab)} \hfill \textit{Remote (Contract)}
+\begin{itemize}
+    \item Created benchmarks and evaluation datasets to test the reasoning, visual grounding, and spatial accuracy of Vision-Language Models.
+    \item Built automated Python data validation scripts that reduced manual review time across 1,000+ multimodal test cases.
+\end{itemize}
+
+\vspace{2.5pt}
+\noindent\textbf{AI Research Consultant --- Generative AI \& Safety} \hfill \textbf{Sep. 2025 -- Dec. 2025} \\
+\textit{Quality Kiosk Technologies} \hfill \textit{Remote (Contract)}
+\begin{itemize}
+    \item Implemented 20+ automated evaluation metrics to test LLM output stability, answer consistency, and prompt response quality.
+    \item Conducted model safety testing and red-teaming (OWASP GenAI Top 10) to prevent prompt injection and secure sensitive data.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%   KEY PROJECTS (EXACTLY 3 PROJECTS, 2 BULLETS EACH)
+%----------------------------------------------------------------------------------------
+\section*{Key AI Projects}
+
+\noindent\textbf{Platyon --- Real-Time Conversational Voice AI Platform} \hfill \href{https://platyon.com}{\textbf{[Live System Demo]}} \\
+\small\textit{Tech: Python, WebSockets, Faster-Whisper, Voice Activity Detection (VAD), FastAPI, Docker, GCP}
+\begin{itemize}
+    \item Built an interactive voice AI application for spoken English practice featuring live audio streaming and user interruption (barge-in).
+    \item Optimized the full pipeline (Speech-to-Text $\rightarrow$ LLM $\rightarrow$ Text-to-Speech) to respond in under 950 milliseconds.
+\end{itemize}
+
+\vspace{2.5pt}
+\noindent\textbf{Lightweight Video Classifier \& Temporal Perception} \hfill \href{https://github.com/harsh2b/problem-1-1-video-classifier}{\textbf{[GitHub Repo]}} \\
+\small\textit{Tech: PyTorch, MobileNetV3, OpenCV, Computer Vision, Gated Attention, Video-MME}
+\begin{itemize}
+    \item Developed a fast deep learning model that classifies video content by combining keyframe images with motion changes.
+    \item Achieved 0.81 Macro-F1 and 74\% accuracy (4.4$\times$ lift over baseline) across 6 video categories with 0.63 ms CPU latency.
+\end{itemize}
+
+\vspace{2.5pt}
+\noindent\textbf{Wellmate --- Clinical Healthcare RAG Chatbot} \hfill \href{https://harshkb.dev}{\textbf{[Live System Demo]}} \\
+\small\textit{Tech: Python, LangChain, Pinecone, Hybrid Search, Docker, Google Cloud Run}
+\begin{itemize}
+    \item Created a medical question-answering assistant using Retrieval-Augmented Generation (RAG) with personal data privacy masking.
+    \item Deployed the containerized application on Google Cloud Run, currently serving 500+ active monthly users with >96\% accuracy.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%   PUBLICATION & EDUCATION
+%----------------------------------------------------------------------------------------
+\section*{Publication \& Education}
+
+\noindent\textbf{IEEE Conference Publication (First Author)} \hfill \textbf{2026} \\
+\small\textit{"LLM-Powered Real-Time Voice Agent for Task-Guided Practice in Serious Games for ASD"} \\
+\footnotesize Published in IEEE 5th International Conference on Secure Cyber Computing and Communications (ICSCCC 2026). Indexed in IEEE Xplore.
+
+\vspace{2.5pt}
+\noindent\textbf{Dr. B. R. Ambedkar National Institute of Technology (NIT) Jalandhar} \hfill \textbf{2024 -- 2026} \\
+\textit{Master of Technology (M.Tech) in Signal Processing and Machine Learning} \hfill \textbf{CGPA: 8.16 / 10.00} \\
+\footnotesize\textbf{Relevant Coursework:} Machine Learning, Deep Learning, Computer Vision, Digital Signal Processing, Applied Linear Algebra.
+
+\vspace{1.5pt}
+\noindent\textbf{Indira Gandhi Engineering College (IGEC Sagar / RGPV)} \hfill \textbf{2017 -- 2021} \\
+\textit{Bachelor of Technology (B.Tech) in Electrical Engineering} \hfill \textbf{CGPA: 7.50 / 10.00}
+
+%----------------------------------------------------------------------------------------
+%   TECHNICAL SKILLS
+%----------------------------------------------------------------------------------------
+\section*{Technical Skills}
+\noindent
+\begin{itemize}[leftmargin=1.15em, itemsep=1pt]
+    \item \textbf{AI, LLMs \& Evaluation:} Generative AI, LLMs, Vision-Language Models (VLMs), RAG, Model Evaluation (DeepEval, RAGAS), Prompt Engineering, Multi-Agent Systems, AI Safety \& Red-Teaming (OWASP GenAI Top 10).
+    \item \textbf{Computer Vision \& Speech AI:} Computer Vision (OpenCV, Object Tracking, Image Classification), PyTorch, TorchVision, Real-Time Voice AI (\texttt{ASR $\rightarrow$ LLM $\rightarrow$ TTS}), Silero VAD, Faster-Whisper, Audio Signal Processing (STFT, MFCC).
+    \item \textbf{Software Development \& DevOps:} Python, C/C++, JavaScript, FastAPI, Git, GitHub, Docker, Google Cloud Platform (GCP Cloud Run), Linux/Bash, Vector Databases (Pinecone, ChromaDB), REST APIs, WebSockets, CI/CD.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%   ACHIEVEMENTS
+%----------------------------------------------------------------------------------------
+\section*{Honors \& Achievements}
+\noindent\small
+\textbf{GATE Qualified} $\cdot$ \textbf{MHRD Postgraduate Fellowship} (NIT Jalandhar) $\cdot$ \textbf{First-Author IEEE Publication} $\cdot$ \textbf{Shipped AI Products Serving 500+ Active Users}
+
+\end{document}
