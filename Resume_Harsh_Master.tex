@@ -107,8 +107,8 @@
 \noindent\textbf{Lightweight Video Classifier \& Temporal Perception} \hfill \href{https://github.com/harsh2b/problem-1-1-video-classifier}{\textbf{[GitHub Repo]}} \\
 \small\textit{Tech: PyTorch, MobileNetV3, OpenCV, Computer Vision, Gated Attention, Video-MME}
 \begin{itemize}
-    \item Developed a fast deep learning model that classifies video content by combining keyframe images with motion changes.
-    \item Achieved 0.81 Macro-F1 and 74\% accuracy (4.4$\times$ lift over baseline) across 6 video categories with 0.63 ms CPU latency.
+    \item Developed a fast video classifier (<1 ms CPU latency) that auto-assigns chunk windows (2s action cuts vs 60s speech) for search indexing.
+    \item Achieved 0.81 Macro-F1 and 74\% accuracy across 6 video categories, eliminating the need for slow, expensive 7B GPU models.
 \end{itemize}
 
 \vspace{2.5pt}
