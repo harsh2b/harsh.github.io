@@ -1,158 +1,191 @@
-%----------------------------------------------------------------------------------------
-% Master Resume - Harsh Kumar Bhojak
-% Target: AI Engineer / AI Product Developer
-% Format: Strict 1-Page Budget, Exact User Typography Specifications
-% - Body: 10.5 pt | Headings: 11.5 pt | Name: 20 pt | Font: Latin Modern | Paper: A4 | Margin: 0.52 in
-%----------------------------------------------------------------------------------------
+\documentclass[letterpaper,10pt]{article}
 
-\documentclass[10pt,a4paper]{article}
-
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage[margin=0.52in,top=0.42in,bottom=0.42in]{geometry}
-\usepackage{hyperref}
-\usepackage{enumitem}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{xcolor}
-\usepackage{microtype}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage[sfdefault,medium]{roboto}
+\input{glyphtounicode}
 
-% Color definitions
-\definecolor{primary}{RGB}{15, 23, 42}       % Slate Dark
-\definecolor{accent}{RGB}{30, 64, 175}       % Royal Blue
-\definecolor{textdark}{RGB}{30, 41, 59}      % Charcoal Text
-\definecolor{rulecolor}{RGB}{203, 213, 225}  % Slate 300 Divider
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-% Hyperlink configuration
-\hypersetup{
-    colorlinks=true,
-    linkcolor=accent,
-    urlcolor=accent,
-    pdftitle={Resume - Harsh Kumar Bhojak - AI Engineer},
-    pdfauthor={Harsh Kumar Bhojak}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section headings: 12pt
+\titleformat{\section}{
+  \vspace{-6pt}\bfseries\raggedright\fontsize{12}{14}\selectfont
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+\pdfgentounicode=1
+
+% Bullet points: 10pt
+\newcommand{\resumeItem}[1]{
+  \item\fontsize{10}{12}\selectfont{{#1 \vspace{-2pt}}}
 }
 
-% Section title formatting: Exact 11.5 pt, Bold, Small Caps
-\titleformat{\section}
-  {\fontsize{11.5pt}{13.5pt}\bfseries\scshape\raggedright\color{primary}}
-  {}{0em}
-  {}[\color{rulecolor}\titlerule]
+% Job and education headings: 10pt
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\fontsize{10}{12}\selectfont #1} &
+      \fontsize{10}{12}\selectfont #2 \\
+      \textit{\fontsize{10}{12}\selectfont #3} &
+      \textit{\fontsize{10}{12}\selectfont #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
 
-\titlespacing*{\section}{0pt}{4pt}{2.5pt}
+% Project headings: 10pt
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \fontsize{10}{12}\selectfont #1 &
+      \fontsize{10}{12}\selectfont #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
 
-% Bullet list configuration: Exact 10.5 pt Body
-\setlist[itemize]{leftmargin=1.15em, itemsep=1pt, topsep=1.5pt, parsep=0pt, partopsep=0pt}
-
-\pagestyle{empty}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \begin{document}
-\fontsize{10.5pt}{13pt}\selectfont
 
-%----------------------------------------------------------------------------------------
-%   HEADER / CONTACT INFO (Name: 20 pt)
-%----------------------------------------------------------------------------------------
 \begin{center}
-    {\fontsize{20pt}{23pt}\bfseries\scshape Harsh Kumar Bhojak} \\[2.5pt]
-    \fontsize{9.5pt}{11.5pt}\selectfont
-    +91-9630499150 \,$\vert$\, 
-    \href{mailto:harshbhojak5@gmail.com}{harshbhojak5@gmail.com} \,$\vert$\, 
-    \href{https://linkedin.com/in/harshkb2}{LinkedIn: \texttt{harshkb2}} \,$\vert$\, 
-    \href{https://github.com/harsh2b}{GitHub: \texttt{harsh2b}} \,$\vert$\, 
-    \href{https://harsh2b.github.io/harsh.github.io/}{Portfolio: \texttt{harshkb.dev}} \\[1.5pt]
-    \footnotesize Open to Remote $\cdot$ Relocation: Bengaluru / Pune / Hyderabad $\cdot$ Notice Period: 0 Days (Immediate Joiner)
+{\fontsize{24}{28}\selectfont \textbf{Harsh Kumar Bhojak}}\\
+\fontsize{9}{11}\selectfont
++91-9630499150 $|$
+\href{mailto:harshbhojak5@gmail.com}{\underline{harshbhojak5@gmail.com}} $|$
+\href{https://www.linkedin.com/in/harsh-bhojak-35b6ab300/}{\underline{LinkedIn}} $|$
+\href{https://github.com/harsh2b}{\underline{GitHub}} $|$
+\href{https://harsh2b.github.io/harsh.github.io/}{\underline{Portfolio}} $|$
+Chhindwara (M.P.) India
 \end{center}
 
-\vspace{-6pt}
-
-%----------------------------------------------------------------------------------------
-%   SUMMARY
-%----------------------------------------------------------------------------------------
-\section*{Summary}
-\noindent
-\textbf{AI Engineer \& Product Developer} with hands-on experience building and deploying production AI systems. Shipped real-time conversational voice agents, healthcare RAG applications serving 500+ monthly users, and computer vision pipelines using PyTorch, FastAPI, and GCP. Published IEEE first author with proven expertise in foundation model evaluation, Git version control, and cloud deployment.
-
-%----------------------------------------------------------------------------------------
-%   WORK EXPERIENCE
-%----------------------------------------------------------------------------------------
-\section*{Work Experience}
-
-\noindent\textbf{Senior Associate --- AI Training \& VLM Evaluation} \hfill \textbf{Jun. 2026 -- Sep. 2026} \\
-\textit{Innodata Inc. (Client: Frontier AI Research Lab)} \hfill \textit{Remote (Contract)}
-\begin{itemize}
-    \item Created benchmarks and evaluation datasets to test the reasoning, visual grounding, and spatial accuracy of Vision-Language Models.
-    \item Built automated Python data validation scripts that reduced manual review time across 1,000+ multimodal test cases.
+%-----------SUMMARY-----------
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\item\fontsize{10}{12}\selectfont{
+AI Engineer \& Product Developer with hands-on experience building and deploying production AI systems. Shipped real-time conversational voice agents, healthcare RAG applications and computer vision pipelines using PyTorch, FastAPI, and GCP. Published IEEE first author with proven expertise in foundation model evaluation, Git version control, and cloud deployment.}
 \end{itemize}
 
-\vspace{2.5pt}
-\noindent\textbf{AI Research Consultant --- Generative AI \& Safety} \hfill \textbf{Sep. 2025 -- Dec. 2025} \\
-\textit{Quality Kiosk Technologies} \hfill \textit{Remote (Contract)}
-\begin{itemize}
-    \item Implemented 20+ automated evaluation metrics to test LLM output stability, answer consistency, and prompt response quality.
-    \item Conducted model safety testing and red-teaming (OWASP GenAI Top 10) to prevent prompt injection and secure sensitive data.
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+\vspace{3pt}
+\resumeSubheading
+{Senior Associate}{Jun. 2026 -- Sep. 2026}
+{Innodata --- Vision-Language Models}{Remote (Contract)}
+\vspace{3pt}
+\resumeItemListStart
+\resumeItem{Designed multi-step reasoning benchmarks and evaluation tasks for training Vision-Language Models (VLMs).}
+\resumeItemListEnd
+
+\vspace{7pt}
+
+\resumeSubheading
+{AI Research Consultant}{Sep. 2025 -- Dec. 2025}
+{Quality Kiosk Technologies --- AI Security}{Remote }
+\vspace{3pt}
+\resumeItemListStart
+\resumeItem{Implemented \textbf{20+ LLM evaluation metrics} improving production LLM reliability and response quality by \textbf{30\%}.}
+\resumeItem{Optimized Gemini prompts across \textbf{30+ edge cases}; built GenAI backend integrations using Django REST Framework.}
+\resumeItem{Applied OWASP GenAI Top 10 and red teaming to strengthen agentic AI workflow security.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{3pt}
+
+\resumeProjectHeading
+{\textbf{Agentic AI Voice Agent -- ASD Therapy Serious Game} $|$ \emph{AutoGen, Gemini, Unity 3D, WebSockets, GCP}  }{\href{https://voiceai.harshkb.dev/}{\underline{Project Link}}}
+\resumeItemListStart
+\resumeItem{Engineered an event-driven speech pipeline integrated with a Unity game for real-time conversational guidance.}
+\resumeItem{Personalized dialogue flows dynamically to patient engagement (Published in IEEE ICSCCC).}
+\resumeItemListEnd
+
+\vspace{10pt}
+\resumeProjectHeading
+{\textbf{VisionChunk -- Fast Video Classifier} $|$ \emph{PyTorch, MobileNetV3, OpenCV, Temporal Attention}  }{\href{https://harsh2b.github.io/harsh.github.io/video-classifier.html}{\underline{Project Link}}}
+\resumeItemListStart
+\resumeItem{Built a lightweight video router that directs videos to optimal chunking strategies.}
+\resumeItem{Achieved \textbf{0.81 Macro-F1} and \textbf{74\% accuracy} across 6 video categories, beating heavy 7B models on efficiency.}
+\resumeItemListEnd
+
+\vspace{10pt}
+\resumeProjectHeading
+{\textbf{Wellmate -- Healthcare Platform} $|$ \emph{LangChain, Pinecone, FastAPI, RAG, GCP Cloud Run} }{\href{https://wellmate.harshkb.dev/}{\underline{Project Link}}}
+\resumeItemListStart
+\resumeItem{Built a healthcare RAG system using LangChain, Pinecone, and FastAPI with retrieval, PII masking, and guardrails.}
+\resumeItem{Deployed on Google Cloud Run serving \textbf{500+ monthly users} and processing \textbf{1,200+ secure medical queries}.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PUBLICATION-----------
+\section{Publication}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{LLM-Powered Real-Time Voice Agent for Task-Guided Practice in Serious Games for ASD}}{\href{https://ieeexplore.ieee.org/document/11600043}{\underline{Link}}}
+\resumeItemListStart
+\resumeItem{Published in \textbf{IEEE 5th International Conference on Secure Cyber Computing and Communications (ICSCCC 2026)}.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading{National Institute of Technology (NIT) Jalandhar}{Punjab, India}{M.Tech -- Signal Processing and Machine Learning}{2024--2026 $|$ CGPA: 8.16/10}
+\vspace{7pt}
+\resumeSubheading{IGEC Sagar}{Madhya Pradesh, India}{B.Tech -- Electrical Engineering}{2017--2021 $|$ CGPA: 7.50/10}
+\resumeSubHeadingListEnd
+\vspace{3pt}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in,label={}]
+\item\fontsize{10}{12}\selectfont{
+\textbf{Software Development \& Cloud:} Python, C/C++, JavaScript, FastAPI, Docker, Google Cloud Platform (GCP Cloud Run), Git, GitHub, Linux, Vector Databases (Pinecone, ChromaDB), WebSockets, CI/CD.\\[2pt]
+\vspace{5px}
+
+\textbf{AI, LLMs \& Evaluation:} Generative AI, LLMs, Vision-Language Models (VLMs), RAG, Model Evaluation (DeepEval, RAGAS), Prompt Engineering, Multi-Agent Systems, LangChain, AutoGen, CrewAI.\\[2pt]
+\vspace{5px}
+
+\textbf{Computer Vision \& Speech AI:} Computer Vision (OpenCV, Object Tracking, Image Classification), PyTorch, TorchVision, Real-Time Voice AI (ASR $\rightarrow$ LLM $\rightarrow$ TTS), Silero VAD, Faster-Whisper, Audio Signal Processing.\\[2pt]
+\vspace{5px}
+\textbf{AI Safety \& Security:} OWASP GenAI Top 10, Prompt Injection Defense, PII Masking, Content Guardrails, Red Teaming.
+}
 \end{itemize}
 
-%----------------------------------------------------------------------------------------
-%   KEY PROJECTS (EXACTLY 3 PROJECTS, 2 BULLETS EACH)
-%----------------------------------------------------------------------------------------
-\section*{Key AI Projects}
-
-\noindent\textbf{Agentic AI Voice Agent --- ASD Therapy Serious Game} \hfill \href{https://github.com/harsh2b/Voice_agent_connector}{\textbf{[GitHub Repo]}} \\
-\small\textit{Tech: AutoGen, Python, WebSockets, Unity 3D, Whisper ASR, FastPitch TTS, GCP}
-\begin{itemize}
-    \item Engineered an event-driven speech pipeline integrated with a Unity 3D serious game for real-time conversational guidance.
-    \item Personalised dialogue flows dynamically to patient engagement, increasing task completion by 30\% (Published in IEEE ICSCCC).
+%-----------CERTIFICATIONS-----------
+\section{Certifications \& Achievements}
+\begin{itemize}[leftmargin=0.15in,label={}]
+\item\fontsize{10}{12}\selectfont{
+\textbf{Certifications:} Generative AI with LangChain \& HuggingFace (Udemy) $|$ Python with DSA Bootcamp (Udemy).
+\textbf{Achievements:} GATE Qualified $|$ MHRD Postgraduate Fellowship $|$ 20+ Freelance Software Projects (e.g., \href{https://bisarga.com}{\underline{bisarga.com}})
+}
 \end{itemize}
-
-\vspace{2.5pt}
-\noindent\textbf{Lightweight Video Classifier \& Temporal Perception} \hfill \href{https://github.com/harsh2b/problem-1-1-video-classifier}{\textbf{[GitHub Repo]}} \\
-\small\textit{Tech: PyTorch, MobileNetV3, OpenCV, Computer Vision, Gated Attention, Video-MME}
-\begin{itemize}
-    \item Developed a fast video classifier (<1 ms CPU latency) that auto-assigns chunk windows (2s action cuts vs 60s speech) for search indexing.
-    \item Achieved 0.81 Macro-F1 and 74\% accuracy across 6 video categories, eliminating the need for slow, expensive 7B GPU models.
-\end{itemize}
-
-\vspace{2.5pt}
-\noindent\textbf{Wellmate --- Clinical Healthcare RAG Chatbot} \hfill \href{https://github.com/harsh2b/RAG}{\textbf{[GitHub Repo]}} \\
-\small\textit{Tech: Python, LangChain, Pinecone, Hybrid Search, Docker, Google Cloud Run}
-\begin{itemize}
-    \item Created a medical question-answering assistant using Retrieval-Augmented Generation (RAG) with personal data privacy masking.
-    \item Deployed the containerized application on Google Cloud Run, currently serving 500+ active monthly users with >96\% accuracy.
-\end{itemize}
-
-%----------------------------------------------------------------------------------------
-%   PUBLICATION & EDUCATION
-%----------------------------------------------------------------------------------------
-\section*{Publication \& Education}
-
-\noindent\textbf{IEEE Conference Publication (First Author)} \hfill \textbf{2026} \\
-\small\textit{"LLM-Powered Real-Time Voice Agent for Task-Guided Practice in Serious Games for ASD"} \\
-\footnotesize Published in IEEE 5th International Conference on Secure Cyber Computing and Communications (ICSCCC 2026). Indexed in IEEE Xplore.
-
-\vspace{2.5pt}
-\noindent\textbf{Dr. B. R. Ambedkar National Institute of Technology (NIT) Jalandhar} \hfill \textbf{2024 -- 2026} \\
-\textit{Master of Technology (M.Tech) in Signal Processing and Machine Learning} \hfill \textbf{CGPA: 8.16 / 10.00} \\
-\footnotesize\textbf{Relevant Coursework:} Machine Learning, Deep Learning, Computer Vision, Digital Signal Processing, Applied Linear Algebra.
-
-\vspace{1.5pt}
-\noindent\textbf{Indira Gandhi Engineering College (IGEC Sagar / RGPV)} \hfill \textbf{2017 -- 2021} \\
-\textit{Bachelor of Technology (B.Tech) in Electrical Engineering} \hfill \textbf{CGPA: 7.50 / 10.00}
-
-%----------------------------------------------------------------------------------------
-%   TECHNICAL SKILLS
-%----------------------------------------------------------------------------------------
-\section*{Technical Skills}
-\noindent
-\begin{itemize}[leftmargin=1.15em, itemsep=1pt]
-    \item \textbf{Software Development \& DevOps:} Python, C/C++, JavaScript, FastAPI, Git, GitHub, Docker, Google Cloud Platform (GCP Cloud Run), Linux/Bash, Vector Databases (Pinecone, ChromaDB), REST APIs, WebSockets, CI/CD.
-    \item \textbf{AI, LLMs \& Evaluation:} Generative AI, LLMs, Vision-Language Models (VLMs), RAG, Model Evaluation (DeepEval, RAGAS), Prompt Engineering, Multi-Agent Systems, AI Safety \& Red-Teaming (OWASP GenAI Top 10).
-    \item \textbf{Computer Vision \& Speech AI:} Computer Vision (OpenCV, Object Tracking, Image Classification), PyTorch, TorchVision, Real-Time Voice AI (\texttt{ASR $\rightarrow$ LLM $\rightarrow$ TTS}), Silero VAD, Faster-Whisper, Audio Signal Processing (STFT, MFCC).
-\end{itemize}
-
-%----------------------------------------------------------------------------------------
-%   ACHIEVEMENTS
-%----------------------------------------------------------------------------------------
-\section*{Honors \& Achievements}
-\noindent\small
-\textbf{GATE Qualified} $\cdot$ \textbf{MHRD Postgraduate Fellowship} (NIT Jalandhar) $\cdot$ \textbf{First-Author IEEE Publication} $\cdot$ \textbf{Shipped AI Products Serving 500+ Active Users}
 
 \end{document}

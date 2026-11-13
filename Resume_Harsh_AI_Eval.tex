@@ -1,0 +1,191 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage[sfdefault,medium]{roboto}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section headings: 12pt
+\titleformat{\section}{
+  \vspace{-6pt}\bfseries\raggedright\fontsize{12}{14}\selectfont
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+\pdfgentounicode=1
+
+% Bullet points: 10pt
+\newcommand{\resumeItem}[1]{
+  \item\fontsize{10}{12}\selectfont{{#1 \vspace{-2pt}}}
+}
+
+% Job and education headings: 10pt
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\fontsize{10}{12}\selectfont #1} &
+      \fontsize{10}{12}\selectfont #2 \\
+      \textit{\fontsize{10}{12}\selectfont #3} &
+      \textit{\fontsize{10}{12}\selectfont #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% Project headings: 10pt
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \fontsize{10}{12}\selectfont #1 &
+      \fontsize{10}{12}\selectfont #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+{\fontsize{24}{28}\selectfont \textbf{Harsh Kumar Bhojak}}\\
+\fontsize{9}{11}\selectfont
++91-9630499150 $|$
+\href{mailto:harshbhojak5@gmail.com}{\underline{harshbhojak5@gmail.com}} $|$
+\href{https://www.linkedin.com/in/harsh-bhojak-35b6ab300/}{\underline{LinkedIn}} $|$
+\href{https://github.com/harsh2b}{\underline{GitHub}} $|$
+\href{https://harsh2b.github.io/harsh.github.io/}{\underline{Portfolio}} $|$
+Chhindwara (M.P.) India
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\item\fontsize{10}{12}\selectfont{
+AI Evaluation \& Model Safety Engineer specializing in \textbf{LLM/VLM benchmarking, automated evaluation frameworks, and AI safety red-teaming}. Hands-on experience developing 20+ automated evaluation metrics, stress-testing frontier models for reasoning failures, and auditing agentic workflows using OWASP GenAI protocols. Published IEEE first author.}
+\end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+\vspace{3pt}
+\resumeSubheading
+{Senior Associate}{Jun. 2026 -- Sep. 2026}
+{Innodata --- Vision-Language Models}{Remote (Contract)}
+\vspace{3pt}
+\resumeItemListStart
+\resumeItem{Designed multi-step reasoning benchmarks and evaluation tasks for training Vision-Language Models (VLMs).}
+\resumeItemListEnd
+
+\vspace{7pt}
+
+\resumeSubheading
+{AI Research Consultant}{Sep. 2025 -- Dec. 2025}
+{Quality Kiosk Technologies --- AI Security}{Remote }
+\vspace{3pt}
+\resumeItemListStart
+\resumeItem{Implemented \textbf{20+ LLM evaluation metrics} improving production LLM reliability and response quality by \textbf{30\%}.}
+\resumeItem{Optimized Gemini prompts across \textbf{30+ edge cases}; built GenAI backend integrations using Django REST Framework.}
+\resumeItem{Applied OWASP GenAI Top 10 and red teaming to strengthen agentic AI workflow security.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{3pt}
+
+\resumeProjectHeading
+{\textbf{Wellmate -- Healthcare Evaluation Platform} $|$ \emph{LangChain, Pinecone, FastAPI, RAG, GCP Cloud Run} }{\href{https://wellmate.harshkb.dev/}{\underline{Project Link}}}
+\resumeItemListStart
+\resumeItem{Built a healthcare RAG system using LangChain, Pinecone, and FastAPI with retrieval, PII masking, and guardrails.}
+\resumeItem{Engineered automated evaluation tests verifying factual grounding, achieving \textbf{>96\% relevance} across 1,200+ secure medical queries.}
+\resumeItemListEnd
+
+\vspace{10pt}
+\resumeProjectHeading
+{\textbf{LLM Benchmark Harness \& Drift Evaluator} $|$ \emph{Python, DeepEval, RAGAS, PyTorch, FastAPI, Docker}  }{\href{https://github.com/harsh2b}{\underline{Project Link}}}
+\resumeItemListStart
+\resumeItem{Engineered an automated benchmark harness assessing LLM instruction adherence, hallucination rate, and semantic drift.}
+\resumeItem{Integrated G-Eval, BERTScore, and custom heuristic metrics to automatically flag out-of-distribution responses in CI/CD.}
+\resumeItemListEnd
+
+\vspace{10pt}
+\resumeProjectHeading
+{\textbf{Agentic AI Voice Agent -- ASD Therapy Serious Game} $|$ \emph{AutoGen, Gemini, Unity 3D, WebSockets, GCP}  }{\href{https://voiceai.harshkb.dev/}{\underline{Project Link}}}
+\resumeItemListStart
+\resumeItem{Engineered an event-driven speech pipeline integrated with a Unity game for real-time conversational guidance.}
+\resumeItem{Personalized dialogue flows dynamically to patient engagement (Published in IEEE ICSCCC).}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PUBLICATION-----------
+\section{Publication}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{LLM-Powered Real-Time Voice Agent for Task-Guided Practice in Serious Games for ASD}}{\href{https://ieeexplore.ieee.org/document/11600043}{\underline{Link}}}
+\resumeItemListStart
+\resumeItem{Published in \textbf{IEEE 5th International Conference on Secure Cyber Computing and Communications (ICSCCC 2026)}.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading{National Institute of Technology (NIT) Jalandhar}{Punjab, India}{M.Tech -- Signal Processing and Machine Learning}{2024--2026 $|$ CGPA: 8.16/10}
+\vspace{7pt}
+\resumeSubheading{IGEC Sagar}{Madhya Pradesh, India}{B.Tech -- Electrical Engineering}{2017--2021 $|$ CGPA: 7.50/10}
+\resumeSubHeadingListEnd
+\vspace{3pt}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in,label={}]
+\item\fontsize{10}{12}\selectfont{
+\textbf{Software Development \& Cloud:} Python, C/C++, JavaScript, FastAPI, Docker, Google Cloud Platform (GCP Cloud Run), Git, GitHub, Linux, Vector Databases (Pinecone, ChromaDB), WebSockets, CI/CD.\\[2pt]
+\vspace{5px}
+
+\textbf{AI Evaluation \& Safety:} Model Evaluation (DeepEval, RAGAS, G-Eval), Benchmark Design, OWASP GenAI Top 10, Red Teaming, Prompt Injection Defense, PII Masking, Content Guardrails.\\[2pt]
+\vspace{5px}
+
+\textbf{AI, LLMs \& Vision-Language Models:} Generative AI, LLMs, Vision-Language Models (VLMs), RAG, Prompt Engineering, Multi-Agent Systems, LangChain, AutoGen, CrewAI.\\[2pt]
+\vspace{5px}
+\textbf{Computer Vision \& Deep Learning:} Computer Vision (OpenCV, Object Tracking, Image Classification), PyTorch, TorchVision, Real-Time Voice AI (ASR $\rightarrow$ LLM $\rightarrow$ TTS), Audio Signal Processing.
+}
+\end{itemize}
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications \& Achievements}
+\begin{itemize}[leftmargin=0.15in,label={}]
+\item\fontsize{10}{12}\selectfont{
+\textbf{Certifications:} Generative AI with LangChain \& HuggingFace (Udemy) $|$ Python with DSA Bootcamp (Udemy).
+\textbf{Achievements:} GATE Qualified $|$ MHRD Postgraduate Fellowship $|$ 20+ Freelance Software Projects (e.g., \href{https://bisarga.com}{\underline{bisarga.com}})
+}
+\end{itemize}
+
+\end{document}
